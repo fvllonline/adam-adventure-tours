@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Menu, X } from "lucide-react"
 
 export default function Navbar() {
@@ -33,11 +34,15 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo - Replace with actual logo */}
+          {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-[#002D62] rounded-lg flex items-center justify-center">
-              <span className="text-[#D7AF6A] font-bold text-xl">A</span>
-            </div>
+            <Image
+              src="/images/favicon_aatt.png"
+              alt="Adam Adventure Tours Logo"
+              width={40}
+              height={40}
+              className="rounded-lg"
+            />
             <span className="text-[#002D62] font-bold text-lg hidden sm:block">Adam Adventure Tours & Tourism</span>
           </Link>
 

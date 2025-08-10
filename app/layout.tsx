@@ -8,9 +8,14 @@ import Footer from "@/components/footer"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Adam Adventure Tours & Tourism",
-  description: "Discover the World with Adam Adventure Tours & Tourism - Premium travel experiences and adventures",
-    generator: 'v0.dev'
+  title: "Adam Adventure Tours & Tourism LLC",
+  description: "Your gateway to unforgettable experiences in Dubai and the UAE - Adam Adventure Tours & Tourism LLC",
+  generator: 'v0.dev',
+  icons: {
+    icon: '/images/favicon_aatt.png',
+    shortcut: '/favicon_att.png',
+    apple: '/favicon_att.png',
+  },
 }
 
 export default function RootLayout({

@@ -6,93 +6,93 @@ export default function HomePage() {
   const services = [
     {
       id: 1,
-      title: "Adventure Tours",
-      description: "Thrilling adventures and outdoor experiences for the brave at heart.",
-      image: "/placeholder.svg?height=300&width=400&text=Adventure+Tours",
+      title: "Custom Tours & Activities",
+      description: "Discover the best of Dubai with carefully crafted tours: iconic landmarks, luxury experiences, and local culture immersion.",
+      image: "/placeholder.svg?height=300&width=400&text=Custom+Tours",
     },
     {
       id: 2,
-      title: "Cultural Experiences",
-      description: "Immerse yourself in local cultures and traditions around the world.",
-      image: "/placeholder.svg?height=300&width=400&text=Cultural+Experiences",
+      title: "Adventure Experiences",
+      description: "Dune bashing, desert safaris, water sports, skydiving, hot air balloon rides... for thrill-seekers and adventure lovers.",
+      image: "/placeholder.svg?height=300&width=400&text=Desert+Adventures",
     },
     {
       id: 3,
-      title: "Luxury Travel",
-      description: "Premium travel experiences with world-class accommodations.",
-      image: "/placeholder.svg?height=300&width=400&text=Luxury+Travel",
+      title: "Cultural Immersion",
+      description: "Explore traditional souks, historical sites, local traditions, and authentic Emirati cuisine for a true cultural experience.",
+      image: "/placeholder.svg?height=300&width=400&text=Local+Culture",
     },
     {
       id: 4,
-      title: "Group Tours",
-      description: "Organized group tours with expert guides and planned itineraries.",
-      image: "/placeholder.svg?height=300&width=400&text=Group+Tours",
+      title: "Luxury & VIP Experiences",
+      description: "Private yachts, helicopter flights, bespoke dining, and personalized shopping for an exclusive and unforgettable experience.",
+      image: "/placeholder.svg?height=300&width=400&text=Luxury+VIP",
     },
   ]
 
   const tours = [
     {
       id: 1,
-      title: "Dubai City Explorer",
-      description: "Discover the modern marvels and traditional charm of Dubai.",
-      image: "/placeholder.svg?height=300&width=400&text=Dubai+City+Explorer",
-      price: "From $299",
+      title: "Desert Safari Adventure",
+      description: "Experience the magic of the Arabian desert with dune bashing, camel rides, and traditional BBQ dinner.",
+      image: "/placeholder.svg?height=300&width=400&text=Desert+Safari",
+      price: "From 299 AED",
     },
     {
       id: 2,
-      title: "Desert Safari Adventure",
-      description: "Experience the magic of the Arabian desert with camel rides and BBQ.",
-      image: "/placeholder.svg?height=300&width=400&text=Desert+Safari",
-      price: "From $149",
+      title: "Modern Dubai City Tour",
+      description: "Discover Dubai's modern marvels: Burj Khalifa, Dubai Mall, and iconic landmarks of the city.",
+      image: "/placeholder.svg?height=300&width=400&text=Modern+Dubai",
+      price: "From 199 AED",
     },
     {
       id: 3,
-      title: "Mountain Hiking Expedition",
-      description: "Challenge yourself with breathtaking mountain trails and views.",
-      image: "/placeholder.svg?height=300&width=400&text=Mountain+Hiking",
-      price: "From $199",
+      title: "Traditional Dhow Cruise",
+      description: "Sail along Dubai Creek or Marina aboard a traditional dhow with buffet dinner and entertainment.",
+      image: "/placeholder.svg?height=300&width=400&text=Dhow+Cruise",
+      price: "From 149 AED",
     },
     {
       id: 4,
-      title: "Island Hopping Tour",
-      description: "Explore pristine islands and crystal-clear waters.",
-      image: "/placeholder.svg?height=300&width=400&text=Island+Hopping",
-      price: "From $399",
+      title: "Theme Parks Experience",
+      description: "Explore Dubai Parks and Resorts, Underwater Aquarium and Zoo - perfect for the whole family.",
+      image: "/placeholder.svg?height=300&width=400&text=Theme+Parks",
+      price: "From 399 AED",
     },
   ]
 
   const packages = [
     {
       id: 1,
-      title: "7-Day UAE Discovery",
-      description: "Complete UAE experience including Dubai, Abu Dhabi, and more.",
+      title: "UAE Discovery - 7 Days",
+      description: "Complete Emirates experience including Dubai, Abu Dhabi, and must-see attractions across the UAE.",
       image: "/placeholder.svg?height=300&width=400&text=UAE+Discovery",
-      price: "From $1,299",
+      price: "From 4,999 AED",
       duration: "7 Days",
     },
     {
       id: 2,
-      title: "European Grand Tour",
-      description: "Visit multiple European capitals in one amazing journey.",
-      image: "/placeholder.svg?height=300&width=400&text=European+Tour",
-      price: "From $2,499",
-      duration: "14 Days",
+      title: "Dubai Luxury Adventure",
+      description: "Premium package with private yacht, helicopter tours, and exclusive VIP experiences.",
+      image: "/placeholder.svg?height=300&width=400&text=Dubai+Luxury",
+      price: "From 8,999 AED",
+      duration: "5 Days",
     },
     {
       id: 3,
-      title: "Asian Adventure Package",
-      description: "Explore the diverse cultures and landscapes of Asia.",
-      image: "/placeholder.svg?height=300&width=400&text=Asian+Adventure",
-      price: "From $1,899",
-      duration: "10 Days",
+      title: "Family & Adventure Package",
+      description: "Family-friendly package with theme parks, safaris, and activities suitable for all ages.",
+      image: "/placeholder.svg?height=300&width=400&text=Family+Adventure",
+      price: "From 3,499 AED",
+      duration: "4 Days",
     },
     {
       id: 4,
-      title: "Luxury Honeymoon Escape",
-      description: "Romantic getaway to the world's most beautiful destinations.",
+      title: "Romantic Honeymoon Escape",
+      description: "Romantic getaway with private dinners, spa treatments, and intimate experiences in Dubai.",
       image: "/placeholder.svg?height=300&width=400&text=Honeymoon+Escape",
-      price: "From $3,299",
-      duration: "12 Days",
+      price: "From 6,999 AED",
+      duration: "6 Days",
     },
   ]
 
@@ -113,11 +113,11 @@ export default function HomePage() {
         </div>
 
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Discover the World with <span className="text-[#D7AF6A]">Adam Adventure Tours</span>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            Your Gateway to Unforgettable Experiences in <span className="text-[#D7AF6A]">Dubai & UAE</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-200">
-            Premium travel experiences and unforgettable adventures await you
+            Adam Adventure Tours & Tourism - Extraordinary journeys that transform your dreams into reality
           </p>
           <Link
             href="/contact"
@@ -134,22 +134,27 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-[#002D62] mb-6">About Adam Adventure Tours</h2>
+              <h2 className="text-4xl font-bold text-[#002D62] mb-6">Adam Adventure Tours & Tourism</h2>
               <p className="text-gray-600 text-lg mb-6">
-                With years of experience in the travel industry, we specialize in creating extraordinary travel
-                experiences that go beyond the ordinary. Our team of expert travel consultants is dedicated to crafting
-                personalized journeys that match your dreams and exceed your expectations.
+                Your gateway to unforgettable experiences in Dubai and the United Arab Emirates. With our deep
+                understanding of the tourism industry and our passion for creating extraordinary journeys, we are
+                your trusted partner for exceptional vacations.
+              </p>
+              <p className="text-gray-600 text-lg mb-6">
+                From visa processing to deep desert adventures, we offer a comprehensive range of services tailored
+                to the diverse needs of our clients. Our experienced professionals are committed to providing
+                personalized attention and superior quality services that exceed your expectations.
               </p>
               <div className="grid grid-cols-2 gap-6 mb-8">
                 <div className="text-center">
                   <Users className="text-[#D7AF6A] mx-auto mb-2" size={40} />
-                  <div className="text-2xl font-bold text-[#002D62]">500+</div>
+                  <div className="text-2xl font-bold text-[#002D62]">1000+</div>
                   <div className="text-gray-600">Happy Clients</div>
                 </div>
                 <div className="text-center">
                   <Globe className="text-[#D7AF6A] mx-auto mb-2" size={40} />
-                  <div className="text-2xl font-bold text-[#002D62]">50+</div>
-                  <div className="text-gray-600">Destinations</div>
+                  <div className="text-2xl font-bold text-[#002D62]">UAE</div>
+                  <div className="text-gray-600">Dubai Specialist</div>
                 </div>
               </div>
               <Link
@@ -162,11 +167,11 @@ export default function HomePage() {
             <div className="relative">
               {/* Replace with actual about image */}
               <Image
-                src="/placeholder.svg?height=500&width=600&text=About+Us+Image"
+                src="/images/favicon_aatt.png"
                 alt="About Us"
-                width={600}
+                width={500}
                 height={500}
-                className="rounded-lg shadow-lg"
+                className=""
               />
             </div>
           </div>

@@ -4,7 +4,8 @@ import type React from "react"
 
 import { useState } from "react"
 import Image from "next/image"
-import { Phone, Mail, MapPin, MessageCircle, Send } from "lucide-react"
+import { Phone, Mail, MapPin, Send } from "lucide-react"
+import { FaWhatsapp, FaInstagram, FaFacebookF, FaTiktok } from "react-icons/fa"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -130,11 +131,15 @@ export default function ContactPage() {
                       <SelectValue placeholder="Select a subject" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="service">Service Inquiry</SelectItem>
-                      <SelectItem value="tours">Tours Information</SelectItem>
+                      <SelectItem value="desert-safari">Desert Safari & Adventures</SelectItem>
+                      <SelectItem value="dubai-tours">Dubai City Tours</SelectItem>
+                      <SelectItem value="luxury-vip">Luxury & VIP Experiences</SelectItem>
+                      <SelectItem value="cultural">Cultural Immersion</SelectItem>
+                      <SelectItem value="theme-parks">Theme Parks</SelectItem>
+                      <SelectItem value="visa-services">Visa Services</SelectItem>
                       <SelectItem value="packages">Travel Packages</SelectItem>
-                      <SelectItem value="general">General Question</SelectItem>
                       <SelectItem value="booking">Booking Assistance</SelectItem>
+                      <SelectItem value="general">General Question</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -175,7 +180,7 @@ export default function ContactPage() {
                 {/* WhatsApp */}
                 <div className="flex items-start space-x-4 p-4 bg-green-50 rounded-lg">
                   <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MessageCircle className="text-white" size={24} />
+                    <FaWhatsapp className="text-white" size={24} />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">WhatsApp</h3>
@@ -249,47 +254,27 @@ export default function ContactPage() {
                     href="https://www.tiktok.com/@adamadventuretours"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-black rounded-lg flex items-center justify-center text-white hover:bg-gray-800 transition-colors"
+                    className="w-12 h-12 bg-black rounded-lg flex items-center justify-center text-white hover:bg-gray-800 transition-colors"
                   >
-                    <span className="text-sm font-bold">TT</span>
+                    <FaTiktok size={20} />
                   </a>
                   <a
                     href="https://www.instagram.com/adamadventuretours"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center text-white hover:from-purple-600 hover:to-pink-600 transition-colors"
+                    className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center text-white hover:from-purple-600 hover:to-pink-600 transition-colors"
                   >
-                    <span className="text-sm font-bold">IG</span>
+                    <FaInstagram size={20} />
                   </a>
                   <a
                     href="https://www.facebook.com/share/1AanxYhXJY/?mibextid=wwXIfr"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white hover:bg-blue-700 transition-colors"
+                    className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center text-white hover:bg-blue-700 transition-colors"
                   >
-                    <span className="text-sm font-bold">FB</span>
+                    <FaFacebookF size={20} />
                   </a>
                 </div>
-              </div>
-
-              {/* Business Hours */}
-              <div className="mt-8 p-4 bg-[#002D62] rounded-lg text-white">
-                <h3 className="text-xl font-semibold mb-4">Business Hours</h3>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span>Monday - Friday:</span>
-                    <span>9:00 AM - 6:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Saturday:</span>
-                    <span>10:00 AM - 4:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Sunday:</span>
-                    <span>Closed</span>
-                  </div>
-                </div>
-                <p className="text-xs text-gray-300 mt-4">* Emergency support available 24/7 for active bookings</p>
               </div>
             </div>
           </div>

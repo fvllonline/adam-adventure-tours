@@ -6,51 +6,51 @@ export default function ServicesPage() {
   const services = [
     {
       id: 1,
-      title: "Adventure Tours",
+      title: "Custom Tours & Activities",
       description:
-        "Thrilling adventures and outdoor experiences for the brave at heart. From mountain climbing to desert expeditions, we offer adrenaline-pumping activities.",
-      image: "/placeholder.svg?height=300&width=400&text=Adventure+Tours",
-      features: ["Mountain Climbing", "Desert Expeditions", "Water Sports", "Wildlife Safaris"],
+        "Discover the best of Dubai with carefully crafted tours: iconic landmarks, luxury experiences, desert adventures and local culture immersion.",
+      image: "/placeholder.svg?height=300&width=400&text=Custom+Tours",
+      features: ["Iconic Landmarks", "Luxury Experiences", "Desert Adventures", "Local Culture"],
     },
     {
       id: 2,
-      title: "Cultural Experiences",
+      title: "Adventure Experiences",
       description:
-        "Immerse yourself in local cultures and traditions around the world. Discover authentic experiences and connect with local communities.",
-      image: "/placeholder.svg?height=300&width=400&text=Cultural+Experiences",
-      features: ["Local Festivals", "Traditional Crafts", "Culinary Tours", "Historical Sites"],
+        "Dune bashing, desert safaris, water sports, skydiving, hot air balloon rides... a wide choice for thrill-seekers and adventure enthusiasts.",
+      image: "/placeholder.svg?height=300&width=400&text=Desert+Adventures",
+      features: ["Dune Bashing", "Water Sports", "Skydiving", "Hot Air Balloon"],
     },
     {
       id: 3,
-      title: "Luxury Travel",
+      title: "Cultural Immersion",
       description:
-        "Premium travel experiences with world-class accommodations and exclusive access to the finest destinations.",
-      image: "/placeholder.svg?height=300&width=400&text=Luxury+Travel",
-      features: ["5-Star Hotels", "Private Jets", "Exclusive Access", "Personal Concierge"],
+        "Explore traditional souks, historical sites, local traditions and authentic cuisine for a true immersion in Emirati culture.",
+      image: "/placeholder.svg?height=300&width=400&text=Local+Culture",
+      features: ["Traditional Souks", "Historical Sites", "Local Traditions", "Authentic Cuisine"],
     },
     {
       id: 4,
-      title: "Group Tours",
+      title: "Theme Park Excursions",
       description:
-        "Organized group tours with expert guides and planned itineraries. Perfect for families, friends, or corporate groups.",
-      image: "/placeholder.svg?height=300&width=400&text=Group+Tours",
-      features: ["Expert Guides", "Planned Itineraries", "Group Discounts", "Transportation"],
+        "Dubai Parks and Resorts, Underwater Aquarium and Zoo, and much more for all ages. Perfect for families and groups.",
+      image: "/placeholder.svg?height=300&width=400&text=Theme+Parks",
+      features: ["Dubai Parks", "Underwater Aquarium", "Family Activities", "All Ages"],
     },
     {
       id: 5,
-      title: "Business Travel",
+      title: "Luxury & VIP Experiences",
       description:
-        "Professional travel services for corporate clients with focus on efficiency, comfort, and cost-effectiveness.",
-      image: "/placeholder.svg?height=300&width=400&text=Business+Travel",
-      features: ["Corporate Rates", "24/7 Support", "Expense Management", "Travel Policy"],
+        "Private yachts, helicopter flights, bespoke dining and personalized shopping for an exclusive and unforgettable experience.",
+      image: "/placeholder.svg?height=300&width=400&text=Luxury+VIP",
+      features: ["Private Yachts", "Helicopter Flights", "Bespoke Dining", "VIP Shopping"],
     },
     {
       id: 6,
-      title: "Honeymoon Packages",
+      title: "Visa Services & Assistance",
       description:
-        "Romantic getaways designed for couples celebrating their special moments with intimate and luxurious experiences.",
-      image: "/placeholder.svg?height=300&width=400&text=Honeymoon+Packages",
-      features: ["Romantic Settings", "Couple Activities", "Special Amenities", "Privacy"],
+        "From visa processing to comprehensive assistance services, we facilitate all administrative aspects of your journey.",
+      image: "/placeholder.svg?height=300&width=400&text=Visa+Services",
+      features: ["Visa Processing", "24/7 Assistance", "Administrative Services", "Multilingual Support"],
     },
   ]
 
@@ -80,8 +80,8 @@ export default function ServicesPage() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-[#002D62] mb-4">What We Offer</h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              From adventure tours to luxury travel, we provide a comprehensive range of services to make your journey
-              unforgettable.
+              From adventure tours to luxury experiences, we provide a comprehensive range of services to make
+              your journey to Dubai and the UAE absolutely unforgettable.
             </p>
           </div>
 
