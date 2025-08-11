@@ -57,16 +57,16 @@ const tours = [
   },
   {
     id: 3,
-    title: "Dubai Luxury Yacht Tour with Burj Al Arab & BBQ Lunch",
-    description: "Sail in luxury with Burj Al Arab views and BBQ lunch.",
-    image: "/placeholder.svg?height=300&width=400&text=Luxury+Yacht",
+    title: "Dubai Luxury Yacht Tour",
+    description: "Sail in luxury.",
+    image: "/images/touryachtlux.jpg",
     price: "From 599 AED",
   },
   {
     id: 4,
     title: "Burj Khalifa Level 124 & 125 Entry Ticket - Daytime",
     description: "Enjoy panoramic views from the world’s tallest tower.",
-    image: "/placeholder.svg?height=300&width=400&text=Burj+Khalifa",
+    image: "/images/tourburjkh.jpg",
     price: "From 179 AED",
   }
 ]
