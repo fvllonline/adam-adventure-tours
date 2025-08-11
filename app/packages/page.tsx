@@ -9,7 +9,6 @@ export default function PackagesPage() {
       title: "7-Day UAE Discovery",
       description: "Complete UAE experience including Dubai, Abu Dhabi, and hidden gems across the Emirates.",
       image: "/placeholder.svg?height=300&width=400&text=UAE+Discovery",
-      price: "From $1,299",
       duration: "7 Days / 6 Nights",
       groupSize: "2-20 people",
       rating: 4.9,
@@ -21,7 +20,6 @@ export default function PackagesPage() {
       title: "European Grand Tour",
       description: "Visit multiple European capitals in one amazing journey through history, culture, and cuisine.",
       image: "/placeholder.svg?height=300&width=400&text=European+Tour",
-      price: "From $2,499",
       duration: "14 Days / 13 Nights",
       groupSize: "4-25 people",
       rating: 4.8,
@@ -33,7 +31,6 @@ export default function PackagesPage() {
       title: "Asian Adventure Package",
       description: "Explore the diverse cultures and landscapes of Asia in this comprehensive adventure tour.",
       image: "/placeholder.svg?height=300&width=400&text=Asian+Adventure",
-      price: "From $1,899",
       duration: "10 Days / 9 Nights",
       groupSize: "6-18 people",
       rating: 4.7,
@@ -45,7 +42,6 @@ export default function PackagesPage() {
       title: "Luxury Honeymoon Escape",
       description: "Romantic getaway to the world's most beautiful destinations with premium accommodations.",
       image: "/placeholder.svg?height=300&width=400&text=Honeymoon+Escape",
-      price: "From $3,299",
       duration: "12 Days / 11 Nights",
       groupSize: "2 people",
       rating: 5.0,
@@ -57,7 +53,6 @@ export default function PackagesPage() {
       title: "Family Fun Adventure",
       description: "Perfect family package with activities suitable for all ages and family-friendly accommodations.",
       image: "/placeholder.svg?height=300&width=400&text=Family+Adventure",
-      price: "From $899",
       duration: "5 Days / 4 Nights",
       groupSize: "2-12 people",
       rating: 4.6,
@@ -70,7 +65,6 @@ export default function PackagesPage() {
       description:
         "Meaningful spiritual experiences visiting sacred sites and participating in traditional ceremonies.",
       image: "/placeholder.svg?height=300&width=400&text=Spiritual+Journey",
-      price: "From $1,599",
       duration: "8 Days / 7 Nights",
       groupSize: "4-15 people",
       rating: 4.8,
@@ -163,8 +157,7 @@ export default function PackagesPage() {
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-[#D7AF6A] font-bold text-xl">{pkg.price}</span>
+                  <div className="flex items-center justify-end mb-4">
                     <div className="flex items-center text-sm text-gray-500">
                       <Award className="w-4 h-4 mr-1" />
                       <span>Premium</span>

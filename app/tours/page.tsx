@@ -21,7 +21,6 @@ export default function ToursPage() {
     title: tour.title,
     description: tour.description,
     image: tour.image,
-    price: tour.price ? `From ${tour.price} AED` : 'Contact for pricing',
     duration: tour.duration,
     groupSize: tour.groupSize,
     rating: tour.rating,
@@ -60,9 +59,7 @@ export default function ToursPage() {
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-sm font-semibold text-[#002D62]">
-                    {tour.price}
-                  </div>
+
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-[#002D62] mb-2">{tour.title}</h3>

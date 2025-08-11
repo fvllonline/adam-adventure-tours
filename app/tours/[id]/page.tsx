@@ -11,7 +11,6 @@ const toursData = {
     description:
       "Explore Dubai's iconic landmarks including Burj Khalifa, Dubai Mall, and Palm Jumeirah.",
     image: "/placeholder.svg?height=500&width=800&text=Dubai+City+Tour",
-    price: "From 199 AED",
     duration: "8 hours",
     groupSize: "2-15 people",
     rating: 4.9,
@@ -49,7 +48,6 @@ const toursData = {
     description:
       "Thrilling dune bashing, camel riding, and traditional BBQ dinner under the stars.",
     image: "/images/tourdesert.webp",
-    price: "From 299 AED",
     duration: "6 hours",
     groupSize: "4-20 people",
     rating: 4.8,
@@ -92,7 +90,6 @@ const toursData = {
     description:
       "Romantic dinner cruise along Dubai Marina with stunning city skyline views.",
     image: "/placeholder.svg?height=500&width=800&text=Dhow+Cruise",
-    price: "From 149 AED",
     duration: "3 hours",
     groupSize: "2-50 people",
     rating: 4.7,
@@ -130,7 +127,6 @@ const toursData = {
     description:
       "Visit the world's tallest building and enjoy breathtaking views from the observation deck.",
     image: "/placeholder.svg?height=500&width=800&text=Burj+Khalifa",
-    price: "From 179 AED",
     duration: "2 hours",
     groupSize: "1-20 people",
     rating: 4.9,
@@ -168,7 +164,6 @@ const toursData = {
     description:
       "Walk through the underwater tunnel and discover marine life at Dubai Mall.",
     image: "/placeholder.svg?height=500&width=800&text=Dubai+Aquarium",
-    price: "From 129 AED",
     duration: "2 hours",
     groupSize: "1-30 people",
     rating: 4.6,
@@ -206,7 +201,6 @@ const toursData = {
     description:
       "World's largest indoor theme park with thrilling rides and attractions.",
     image: "/placeholder.svg?height=500&width=800&text=IMG+Worlds",
-    price: "From 349 AED",
     duration: "Full day",
     groupSize: "1-50 people",
     rating: 4.8,
@@ -244,7 +238,6 @@ const toursData = {
     description:
       "Iconic golden frame offering panoramic views of old and new Dubai.",
     image: "/placeholder.svg?height=500&width=800&text=Dubai+Frame",
-    price: "From 89 AED",
     duration: "1.5 hours",
     groupSize: "1-25 people",
     rating: 4.5,
@@ -282,7 +275,6 @@ const toursData = {
     description:
       "Cultural and entertainment destination featuring pavilions from around the world.",
     image: "/images/tourgv.webp",
-    price: "From 25 AED",
     duration: "4 hours",
     groupSize: "1-100 people",
     rating: 4.4,
@@ -320,7 +312,6 @@ const toursData = {
     description:
       "World's largest natural flower garden with over 50 million flowers.",
     image: "/placeholder.svg?height=500&width=800&text=Miracle+Garden",
-    price: "From 75 AED",
     duration: "2 hours",
     groupSize: "1-50 people",
     rating: 4.6,
@@ -358,7 +349,6 @@ const toursData = {
     description:
       "Thrilling water park with slides, marine encounters, and beach access.",
     image: "/images/touratlantis.jpg",
-    price: "From 299 AED",
     duration: "Full day",
     groupSize: "1-40 people",
     rating: 4.7,
@@ -396,7 +386,6 @@ const toursData = {
     description:
       "Multiple theme parks including Motiongate, Bollywood Parks, and Legoland.",
     image: "/placeholder.svg?height=500&width=800&text=Dubai+Parks",
-    price: "From 279 AED",
     duration: "Full day",
     groupSize: "1-50 people",
     rating: 4.5,
@@ -434,7 +423,6 @@ const toursData = {
     description:
       "Indoor ski resort with real snow, skiing, snowboarding, and penguin encounters.",
     image: "/placeholder.svg?height=500&width=800&text=Ski+Dubai",
-    price: "From 199 AED",
     duration: "3 hours",
     groupSize: "1-30 people",
     rating: 4.6,
@@ -472,7 +460,6 @@ const toursData = {
     description:
       "World's largest choreographed fountain system with music and lights.",
     image: "/placeholder.svg?height=500&width=800&text=Dubai+Fountain",
-    price: "Free",
     duration: "30 minutes",
     groupSize: "Unlimited",
     rating: 4.8,
@@ -510,7 +497,6 @@ const toursData = {
     description:
       "Trendy beachfront destination with dining, shopping, and water sports.",
     image: "/placeholder.svg?height=500&width=800&text=La+Mer",
-    price: "From 50 AED",
     duration: "Half day",
     groupSize: "1-20 people",
     rating: 4.4,
@@ -548,7 +534,6 @@ const toursData = {
     description:
       "Waterfront promenade with dining, shopping, and stunning marina views.",
     image: "/placeholder.svg?height=500&width=800&text=Marina+Walk",
-    price: "Free",
     duration: "2 hours",
     groupSize: "Unlimited",
     rating: 4.3,
@@ -586,7 +571,6 @@ const toursData = {
     description:
       "Beautiful white sand beach with clear waters and Burj Al Arab views.",
     image: "/placeholder.svg?height=500&width=800&text=Jumeirah+Beach",
-    price: "Free",
     duration: "Half day",
     groupSize: "Unlimited",
     rating: 4.5,
@@ -745,10 +729,6 @@ export default function TourDetailPage({ params }: { params: { id: string } }) {
 
             <div className="lg:col-span-1">
               <div className="bg-white rounded-lg shadow-lg p-6 sticky top-24">
-                <div className="text-center mb-6">
-                  <div className="text-3xl font-bold text-[#D7AF6A] mb-2">{tour.price}</div>
-                  <div className="text-gray-600">per person</div>
-                </div>
 
                 <div className="space-y-4 mb-6">
                   <div className="flex items-center justify-between">

@@ -8,7 +8,6 @@ const packages = {
     description:
       "Complete UAE experience including Dubai, Abu Dhabi, and hidden gems across the Emirates in this comprehensive week-long journey.",
     image: "/placeholder.svg?height=500&width=800&text=UAE+Discovery+Detail",
-    price: "From $1,299",
     duration: "7 Days / 6 Nights",
     groupSize: "2-20 people",
     rating: 4.9,
@@ -52,7 +51,6 @@ const packages = {
     description:
       "Visit multiple European capitals in one amazing journey through history, culture, and cuisine across 14 unforgettable days.",
     image: "/placeholder.svg?height=500&width=800&text=European+Tour+Detail",
-    price: "From $2,499",
     duration: "14 Days / 13 Nights",
     groupSize: "4-25 people",
     rating: 4.8,
@@ -96,7 +94,6 @@ const packages = {
     description:
       "Explore the diverse cultures and landscapes of Asia in this comprehensive adventure tour spanning three fascinating countries.",
     image: "/placeholder.svg?height=500&width=800&text=Asian+Adventure+Detail",
-    price: "From $1,899",
     duration: "10 Days / 9 Nights",
     groupSize: "6-18 people",
     rating: 4.7,
@@ -142,7 +139,6 @@ const packages = {
     description:
       "Romantic getaway to the world's most beautiful destinations with premium accommodations and intimate experiences for couples.",
     image: "/placeholder.svg?height=500&width=800&text=Honeymoon+Escape+Detail",
-    price: "From $3,299",
     duration: "12 Days / 11 Nights",
     groupSize: "2 people",
     rating: 5.0,
@@ -185,7 +181,6 @@ const packages = {
     description:
       "Perfect family package with activities suitable for all ages and family-friendly accommodations designed for memorable family bonding.",
     image: "/placeholder.svg?height=500&width=800&text=Family+Adventure+Detail",
-    price: "From $899",
     duration: "5 Days / 4 Nights",
     groupSize: "2-12 people",
     rating: 4.6,
@@ -226,7 +221,6 @@ const packages = {
     description:
       "Meaningful spiritual experiences visiting sacred sites and participating in traditional ceremonies for inner peace and cultural understanding.",
     image: "/placeholder.svg?height=500&width=800&text=Spiritual+Journey+Detail",
-    price: "From $1,599",
     duration: "8 Days / 7 Nights",
     groupSize: "4-15 people",
     rating: 4.8,
@@ -382,10 +376,6 @@ export default function PackageDetailPage({ params }: { params: { id: string } }
 
             <div className="lg:col-span-1">
               <div className="bg-white rounded-lg shadow-lg p-6 sticky top-24">
-                <div className="text-center mb-6">
-                  <div className="text-3xl font-bold text-[#D7AF6A] mb-2">{pkg.price}</div>
-                  <div className="text-gray-600">per person</div>
-                </div>
 
                 <div className="space-y-4 mb-6">
                   <div className="flex items-center justify-between">

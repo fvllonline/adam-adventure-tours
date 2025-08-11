@@ -46,28 +46,24 @@ const tours = [
     title: "Museum of the Future",
     description: "Discover futuristic innovations in Dubai's most iconic building.",
     image: "/images/tourmuseum.jpg",
-    price: "From 149 AED",
   },
   {
     id: 2,
     title: "Dubai Desert Safari, Quad Bike, Camel Ride & Al Khayma Camp",
     description: "Desert thrills with dunes, quads, camels & camp.",
     image: "/images/tourdesert.webp",
-    price: "From 299 AED",
   },
   {
     id: 3,
     title: "Dubai Luxury Yacht Tour",
     description: "Sail in luxury.",
     image: "/images/touryachtlux.jpg",
-    price: "From 599 AED",
   },
   {
     id: 4,
     title: "Burj Khalifa Level 124 & 125 Entry Ticket - Daytime",
     description: "Enjoy panoramic views from the world’s tallest tower.",
     image: "/images/tourburjkh.jpg",
-    price: "From 179 AED",
   }
 ]
 
@@ -79,7 +75,6 @@ const tours = [
       title: "UAE Discovery - 7 Days",
       description: "Complete Emirates experience including Dubai, Abu Dhabi, and must-see attractions across the UAE.",
       image: "/placeholder.svg?height=300&width=400&text=UAE+Discovery",
-      price: "From 4,999 AED",
       duration: "7 Days",
     },
     {
@@ -87,7 +82,6 @@ const tours = [
       title: "Dubai Luxury Adventure",
       description: "Premium package with private yacht, helicopter tours, and exclusive VIP experiences.",
       image: "/placeholder.svg?height=300&width=400&text=Dubai+Luxury",
-      price: "From 8,999 AED",
       duration: "5 Days",
     },
     {
@@ -95,7 +89,6 @@ const tours = [
       title: "Family & Adventure Package",
       description: "Family-friendly package with theme parks, safaris, and activities suitable for all ages.",
       image: "/placeholder.svg?height=300&width=400&text=Family+Adventure",
-      price: "From 3,499 AED",
       duration: "4 Days",
     },
     {
@@ -103,7 +96,6 @@ const tours = [
       title: "Romantic Honeymoon Escape",
       description: "Romantic getaway with private dinners, spa treatments, and intimate experiences in Dubai.",
       image: "/placeholder.svg?height=300&width=400&text=Honeymoon+Escape",
-      price: "From 6,999 AED",
       duration: "6 Days",
     },
   ]
@@ -260,9 +252,7 @@ const tours = [
                   </div>
                   <h3 className="text-2xl font-bold text-[#002D62] mb-4">{tours[0].title}</h3>
                   <p className="text-gray-600 mb-6">{tours[0].description}</p>
-                  <div className="flex justify-between items-center mb-4">
-                    <span className="text-[#D7AF6A] font-bold text-xl">{tours[0].price}</span>
-                  </div>
+
                   <Link
                     href={`/tours/${titleToSlug(tours[0].title)}`}
                     className="bg-[#D7AF6A] text-[#002D62] px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-[#002D62] hover:text-white text-center"
@@ -309,8 +299,7 @@ const tours = [
                           <h4 className="text-lg font-semibold text-[#002D62] mb-2 group-hover:text-[#D7AF6A] transition-colors">{tour.title}</h4>
                           <p className="text-gray-600 text-sm mb-3 line-clamp-2">{tour.description}</p>
                         </div>
-                        <div className="flex justify-between items-center">
-                          <span className="text-[#D7AF6A] font-bold">{tour.price}</span>
+                        <div className="flex justify-end items-center">
                           <span className="text-[#002D62] font-semibold hover:text-[#D7AF6A] transition-colors text-sm">
                             View Details <ArrowRight className="inline ml-1" size={14} />
                           </span>
@@ -367,8 +356,7 @@ const tours = [
                   </div>
                   <h3 className="text-xl font-semibold text-[#002D62] mb-3">{pkg.title}</h3>
                   <p className="text-gray-600 mb-4">{pkg.description}</p>
-                  <div className="flex justify-between items-center">
-                    <span className="text-[#D7AF6A] font-bold text-lg">{pkg.price}</span>
+                  <div className="flex justify-end items-center">
                     <Link
                       href={`/packages/${pkg.id}`}
                       className="text-[#002D62] font-semibold hover:text-[#D7AF6A] transition-colors"
