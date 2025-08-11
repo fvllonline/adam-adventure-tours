@@ -2,6 +2,16 @@ import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight, Star, Users, Globe, Award } from "lucide-react"
 
+// Function to convert tour title to URL slug
+function titleToSlug(title: string): string {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '') // Remove special characters except spaces and hyphens
+    .replace(/\s+/g, '-') // Replace spaces with hyphens
+    .replace(/-+/g, '-') // Replace multiple hyphens with single hyphen
+    .trim()
+}
+
 export default function HomePage() {
   const services = [
     {
@@ -30,120 +40,38 @@ export default function HomePage() {
     },
   ]
 
-  const tours = [
-    {
-      id: 1,
-      title: "Dubai City Tour",
-      description: "Explore Dubai's iconic landmarks including Burj Khalifa, Dubai Mall, and Palm Jumeirah.",
-      image: "/placeholder.svg?height=300&width=400&text=Dubai+City+Tour",
-      price: "From 199 AED",
-    },
-    {
-      id: 2,
-      title: "Desert Safari with BBQ Dinner",
-      description: "Thrilling dune bashing, camel riding, and traditional BBQ dinner under the stars.",
-      image: "/placeholder.svg?height=300&width=400&text=Desert+Safari",
-      price: "From 299 AED",
-    },
-    {
-      id: 3,
-      title: "Dhow Cruise Marina",
-      description: "Romantic dinner cruise along Dubai Marina with stunning city skyline views.",
-      image: "/placeholder.svg?height=300&width=400&text=Dhow+Cruise",
-      price: "From 149 AED",
-    },
-    {
-      id: 4,
-      title: "Burj Khalifa At The Top",
-      description: "Visit the world's tallest building and enjoy breathtaking views from the observation deck.",
-      image: "/placeholder.svg?height=300&width=400&text=Burj+Khalifa",
-      price: "From 179 AED",
-    },
-    {
-      id: 5,
-      title: "Dubai Aquarium & Underwater Zoo",
-      description: "Walk through the underwater tunnel and discover marine life at Dubai Mall.",
-      image: "/placeholder.svg?height=300&width=400&text=Dubai+Aquarium",
-      price: "From 129 AED",
-    },
-    {
-      id: 6,
-      title: "IMG Worlds of Adventure",
-      description: "World's largest indoor theme park with thrilling rides and attractions.",
-      image: "/placeholder.svg?height=300&width=400&text=IMG+Worlds",
-      price: "From 349 AED",
-    },
-    {
-      id: 7,
-      title: "Dubai Frame",
-      description: "Iconic golden frame offering panoramic views of old and new Dubai.",
-      image: "/placeholder.svg?height=300&width=400&text=Dubai+Frame",
-      price: "From 89 AED",
-    },
-    {
-      id: 8,
-      title: "Global Village",
-      description: "Cultural and entertainment destination featuring pavilions from around the world.",
-      image: "/placeholder.svg?height=300&width=400&text=Global+Village",
-      price: "From 25 AED",
-    },
-    {
-      id: 9,
-      title: "Dubai Miracle Garden",
-      description: "World's largest natural flower garden with over 50 million flowers.",
-      image: "/placeholder.svg?height=300&width=400&text=Miracle+Garden",
-      price: "From 75 AED",
-    },
-    {
-      id: 10,
-      title: "Atlantis Aquaventure",
-      description: "Thrilling water park with slides, marine encounters, and beach access.",
-      image: "/placeholder.svg?height=300&width=400&text=Aquaventure",
-      price: "From 299 AED",
-    },
-    {
-      id: 11,
-      title: "Dubai Parks and Resorts",
-      description: "Multiple theme parks including Motiongate, Bollywood Parks, and Legoland.",
-      image: "/placeholder.svg?height=300&width=400&text=Dubai+Parks",
-      price: "From 279 AED",
-    },
-    {
-      id: 12,
-      title: "Ski Dubai",
-      description: "Indoor ski resort with real snow, skiing, snowboarding, and penguin encounters.",
-      image: "/placeholder.svg?height=300&width=400&text=Ski+Dubai",
-      price: "From 199 AED",
-    },
-    {
-      id: 13,
-      title: "Dubai Fountain Show",
-      description: "World's largest choreographed fountain system with music and lights.",
-      image: "/placeholder.svg?height=300&width=400&text=Dubai+Fountain",
-      price: "Free",
-    },
-    {
-      id: 14,
-      title: "La Mer Beach",
-      description: "Trendy beachfront destination with dining, shopping, and water sports.",
-      image: "/placeholder.svg?height=300&width=400&text=La+Mer",
-      price: "From 50 AED",
-    },
-    {
-      id: 15,
-      title: "Dubai Marina Walk",
-      description: "Waterfront promenade with dining, shopping, and stunning marina views.",
-      image: "/placeholder.svg?height=300&width=400&text=Marina+Walk",
-      price: "Free",
-    },
-    {
-      id: 16,
-      title: "Jumeirah Beach",
-      description: "Beautiful white sand beach with clear waters and Burj Al Arab views.",
-      image: "/placeholder.svg?height=300&width=400&text=Jumeirah+Beach",
-      price: "Free",
-    },
-  ]
+const tours = [
+  {
+    id: 1,
+    title: "Museum of the Future",
+    description: "Discover futuristic innovations in Dubai's most iconic building.",
+    image: "/images/tourmuseum.jpg",
+    price: "From 149 AED",
+  },
+  {
+    id: 2,
+    title: "Dubai Desert Safari, Quad Bike, Camel Ride & Al Khayma Camp",
+    description: "Desert thrills with dunes, quads, camels & camp.",
+    image: "/images/tourdesert.webp",
+    price: "From 299 AED",
+  },
+  {
+    id: 3,
+    title: "Dubai Luxury Yacht Tour with Burj Al Arab & BBQ Lunch",
+    description: "Sail in luxury with Burj Al Arab views and BBQ lunch.",
+    image: "/placeholder.svg?height=300&width=400&text=Luxury+Yacht",
+    price: "From 599 AED",
+  },
+  {
+    id: 4,
+    title: "Burj Khalifa Level 124 & 125 Entry Ticket - Daytime",
+    description: "Enjoy panoramic views from the world’s tallest tower.",
+    image: "/placeholder.svg?height=300&width=400&text=Burj+Khalifa",
+    price: "From 179 AED",
+  }
+]
+
+
 
   const packages = [
     {
@@ -336,7 +264,7 @@ export default function HomePage() {
                     <span className="text-[#D7AF6A] font-bold text-xl">{tours[0].price}</span>
                   </div>
                   <Link
-                    href={`/tours/${tours[0].id}`}
+                    href={`/tours/${titleToSlug(tours[0].title)}`}
                     className="bg-[#D7AF6A] text-[#002D62] px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-[#002D62] hover:text-white text-center"
                   >
                     View Details <ArrowRight className="inline ml-1" size={16} />
@@ -357,39 +285,40 @@ export default function HomePage() {
             {/* Three Stacked Tours */}
             <div className="space-y-6">
               {tours.slice(1, 4).map((tour) => (
-                <div key={tour.id} className="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
-                  <div className="flex">
-                    <div className="w-1/3">
-                      <Image
-                        src={tour.image || "/placeholder.svg"}
-                        alt={tour.title}
-                        width={200}
-                        height={150}
-                        className="w-full h-32 object-cover"
-                      />
-                    </div>
-                    <div className="w-2/3 p-4">
-                      <div className="flex items-center mb-2">
-                        <Star className="text-[#D7AF6A] fill-current" size={14} />
-                        <Star className="text-[#D7AF6A] fill-current" size={14} />
-                        <Star className="text-[#D7AF6A] fill-current" size={14} />
-                        <Star className="text-[#D7AF6A] fill-current" size={14} />
-                        <Star className="text-[#D7AF6A] fill-current" size={14} />
+                <Link key={tour.id} href={`/tours/${titleToSlug(tour.title)}`} className="block">
+                  <div className="bg-white rounded-lg shadow-lg overflow-hidden card-hover h-32 cursor-pointer transition-all duration-300 hover:shadow-xl">
+                    <div className="flex h-full">
+                      <div className="w-1/3">
+                        <Image
+                          src={tour.image || "/placeholder.svg"}
+                          alt={tour.title}
+                          width={200}
+                          height={150}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
-                      <h4 className="text-lg font-semibold text-[#002D62] mb-2">{tour.title}</h4>
-                      <p className="text-gray-600 text-sm mb-3 line-clamp-2">{tour.description}</p>
-                      <div className="flex justify-between items-center">
-                        <span className="text-[#D7AF6A] font-bold">{tour.price}</span>
-                        <Link
-                          href={`/tours/${tour.id}`}
-                          className="text-[#002D62] font-semibold hover:text-[#D7AF6A] transition-colors text-sm"
-                        >
-                          View Details <ArrowRight className="inline ml-1" size={14} />
-                        </Link>
+                      <div className="w-2/3 p-4 flex flex-col justify-between">
+                        <div>
+                          <div className="flex items-center mb-2">
+                            <Star className="text-[#D7AF6A] fill-current" size={14} />
+                            <Star className="text-[#D7AF6A] fill-current" size={14} />
+                            <Star className="text-[#D7AF6A] fill-current" size={14} />
+                            <Star className="text-[#D7AF6A] fill-current" size={14} />
+                            <Star className="text-[#D7AF6A] fill-current" size={14} />
+                          </div>
+                          <h4 className="text-lg font-semibold text-[#002D62] mb-2 group-hover:text-[#D7AF6A] transition-colors">{tour.title}</h4>
+                          <p className="text-gray-600 text-sm mb-3 line-clamp-2">{tour.description}</p>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-[#D7AF6A] font-bold">{tour.price}</span>
+                          <span className="text-[#002D62] font-semibold hover:text-[#D7AF6A] transition-colors text-sm">
+                            View Details <ArrowRight className="inline ml-1" size={14} />
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               ))}
 
               {/* View All Tours Button */}

@@ -1,249 +1,647 @@
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft, Star, Clock, Users, Phone, MessageCircle } from "lucide-react"
+import { FaTiktok, FaInstagram, FaFacebookF } from 'react-icons/fa'
+import { tours } from '@/data/tours'
 
-const tours = {
+// Legacy tours data for backward compatibility
+const toursData = {
   1: {
-    title: "Dubai City Explorer",
+    title: "Dubai City Tour",
     description:
-      "Discover the modern marvels and traditional charm of Dubai in this comprehensive city tour that showcases the best of this incredible city.",
-    image: "/placeholder.svg?height=500&width=800&text=Dubai+City+Explorer+Detail",
-    price: "From $299",
+      "Explore Dubai's iconic landmarks including Burj Khalifa, Dubai Mall, and Palm Jumeirah.",
+    image: "/placeholder.svg?height=500&width=800&text=Dubai+City+Tour",
+    price: "From 199 AED",
     duration: "8 hours",
     groupSize: "2-15 people",
     rating: 4.9,
-    highlights: ["Burj Khalifa", "Dubai Mall", "Gold Souk", "Dubai Creek"],
-    fullDescription: `Experience the best of Dubai in this comprehensive full-day tour that combines modern attractions with traditional culture. Start your journey at the iconic Burj Khalifa, the world's tallest building, where you'll enjoy breathtaking views from the observation deck.
+    highlights: ["Burj Khalifa", "Dubai Mall", "Palm Jumeirah", "Dubai Marina"],
+    fullDescription: `Experience the best of Dubai in this comprehensive full-day tour that combines modern attractions with iconic landmarks. Start your journey at the world-famous Burj Khalifa, the tallest building in the world, where you'll enjoy breathtaking views from the observation deck.
 
-    Continue to the Dubai Mall, one of the world's largest shopping destinations, where you can witness the spectacular Dubai Fountain show. Explore the historic Gold Souk and Spice Souk, where you can bargain for precious metals and aromatic spices.
+    Continue to the Dubai Mall, one of the world's largest shopping destinations, where you can witness the spectacular Dubai Fountain show. Explore the man-made wonder of Palm Jumeirah, an artificial archipelago that's home to luxury resorts and stunning beaches.
 
-    Take an abra (traditional boat) ride across Dubai Creek to experience the city's maritime heritage. Visit the Dubai Museum to learn about the emirate's fascinating transformation from a fishing village to a global metropolis.
+    Visit Dubai Marina, a stunning waterfront development with impressive skyscrapers and yacht-filled waters. Take photos at the iconic Atlantis The Palm and enjoy the beautiful coastline views.
 
-    The tour includes comfortable transportation, professional guide, and entrance fees to major attractions. Lunch at a traditional restaurant is included, offering you a taste of authentic Emirati cuisine.`,
+    The tour includes comfortable air-conditioned transportation, professional English-speaking guide, and entrance fees to major attractions. Lunch at a premium restaurant is included, offering you a taste of international cuisine with Dubai flair.`,
     itinerary: [
       "9:00 AM - Hotel pickup and departure",
       "9:30 AM - Burj Khalifa visit and observation deck",
-      "11:00 AM - Dubai Mall and Dubai Fountain",
-      "12:30 PM - Traditional lunch at local restaurant",
-      "2:00 PM - Gold Souk and Spice Souk exploration",
-      "3:30 PM - Abra ride across Dubai Creek",
-      "4:00 PM - Dubai Museum visit",
-      "5:00 PM - Return to hotel",
+      "11:00 AM - Dubai Mall and Dubai Fountain show",
+      "12:30 PM - Lunch at premium restaurant",
+      "2:00 PM - Palm Jumeirah monorail and Atlantis photo stop",
+      "3:30 PM - Dubai Marina walk and yacht viewing",
+      "4:30 PM - JBR Beach and The Walk",
+      "5:30 PM - Return to hotel",
     ],
     included: [
       "Professional English-speaking guide",
       "Comfortable air-conditioned transportation",
-      "Burj Khalifa observation deck tickets",
-      "Traditional lunch at local restaurant",
-      "Abra ride across Dubai Creek",
-      "Dubai Museum entrance fee",
+      "Burj Khalifa At The Top tickets",
+      "Premium lunch at Dubai Mall",
+      "Palm Jumeirah monorail tickets",
+      "Dubai Marina guided walk",
       "Hotel pickup and drop-off",
+      "Bottled water throughout the tour",
     ],
   },
   2: {
-    title: "Desert Safari Adventure",
+    title: "Desert Safari with BBQ Dinner",
     description:
-      "Experience the magic of the Arabian desert with camel rides, dune bashing, and traditional BBQ dinner under the stars.",
-    image: "/placeholder.svg?height=500&width=800&text=Desert+Safari+Detail",
-    price: "From $149",
+      "Thrilling dune bashing, camel riding, and traditional BBQ dinner under the stars.",
+    image: "/images/tourdesert.webp",
+    price: "From 299 AED",
     duration: "6 hours",
     groupSize: "4-20 people",
     rating: 4.8,
     highlights: ["Dune Bashing", "Camel Riding", "BBQ Dinner", "Cultural Show"],
-    fullDescription: `Embark on an unforgettable desert adventure that combines thrilling activities with cultural experiences. Your journey begins with an exciting dune bashing session in a 4WD vehicle, navigating the golden sand dunes of the Arabian desert.
+    fullDescription: `Embark on an unforgettable desert adventure that combines thrilling activities with authentic cultural experiences. Your journey begins with an exciting dune bashing session in a 4WD vehicle, navigating the golden sand dunes of the Arabian desert with experienced drivers.
 
-    Experience the traditional mode of desert transportation with a camel ride, offering you a unique perspective of the vast desert landscape. Try sandboarding down the dunes for an adrenaline rush, or simply relax and enjoy the serene beauty of the desert.
+    Experience the traditional mode of desert transportation with a camel ride, offering you a unique perspective of the vast desert landscape. Try sandboarding down the dunes for an adrenaline rush, or simply relax and enjoy the serene beauty of the desert sunset.
 
-    As the sun sets, arrive at a traditional Bedouin-style camp where you'll be welcomed with Arabic coffee and dates. Enjoy henna painting, try on traditional Arabic costumes for photos, and watch a mesmerizing belly dance and Tanoura show under the starlit sky.
+    As the sun sets, arrive at a traditional Bedouin-style camp where you'll be welcomed with Arabic coffee, dates, and traditional hospitality. Enjoy henna painting, try on traditional Arabic costumes for memorable photos, and watch mesmerizing belly dance and Tanoura shows under the starlit sky.
 
-    The evening culminates with a delicious BBQ dinner featuring grilled meats, fresh salads, and traditional Arabic dishes. Vegetarian options are also available. Enjoy unlimited soft drinks, water, tea, and coffee throughout the evening.
+    The evening culminates with a delicious BBQ dinner featuring grilled meats, fresh salads, and traditional Arabic dishes. Vegetarian and special dietary options are available upon request. Enjoy unlimited soft drinks, water, Arabic tea, and coffee throughout the evening.
 
-    All safety equipment and experienced drivers ensure your dune bashing experience is both thrilling and safe. The camp provides comfortable seating areas with cushions and low tables in traditional Arabic style.`,
+    All safety equipment and experienced drivers ensure your dune bashing experience is both thrilling and safe. The camp provides comfortable seating areas with cushions and low tables in traditional Arabic majlis style.`,
     itinerary: [
       "3:00 PM - Hotel pickup in 4WD vehicle",
-      "4:00 PM - Arrive at desert and dune bashing session",
-      "5:00 PM - Camel riding and sandboarding",
+      "4:00 PM - Arrive at desert and safety briefing",
+      "4:15 PM - Dune bashing adventure session",
+      "5:15 PM - Camel riding and sandboarding",
       "6:00 PM - Sunset photography and relaxation",
-      "6:30 PM - Arrive at Bedouin camp",
-      "7:00 PM - Welcome drinks, henna, and costume photos",
-      "8:00 PM - Cultural shows (belly dance, Tanoura)",
-      "8:30 PM - BBQ dinner under the stars",
+      "6:30 PM - Arrive at traditional Bedouin camp",
+      "7:00 PM - Welcome drinks, henna painting, costume photos",
+      "8:00 PM - Cultural shows (belly dance, Tanoura, fire show)",
+      "8:30 PM - Traditional BBQ dinner under the stars",
       "9:30 PM - Return journey to hotel",
     ],
     included: [
       "4WD vehicle transportation with experienced driver",
-      "Dune bashing adventure session",
-      "Camel riding experience",
-      "Sandboarding equipment",
-      "Welcome refreshments at camp",
+      "Thrilling dune bashing adventure session",
+      "Camel riding experience (15 minutes)",
+      "Sandboarding equipment and instruction",
+      "Welcome refreshments at desert camp",
       "Henna painting and Arabic costume photos",
       "Cultural entertainment shows",
-      "BBQ dinner with unlimited beverages",
-      "Hotel pickup and drop-off",
+      "Traditional BBQ dinner with unlimited beverages",
+      "Hotel pickup and drop-off in Dubai",
     ],
   },
   3: {
-    title: "Mountain Hiking Expedition",
+    title: "Dhow Cruise Marina",
     description:
-      "Challenge yourself with breathtaking mountain trails and spectacular panoramic views in this full-day hiking adventure.",
-    image: "/placeholder.svg?height=500&width=800&text=Mountain+Hiking+Detail",
-    price: "From $199",
-    duration: "Full day",
-    groupSize: "4-12 people",
+      "Romantic dinner cruise along Dubai Marina with stunning city skyline views.",
+    image: "/placeholder.svg?height=500&width=800&text=Dhow+Cruise",
+    price: "From 149 AED",
+    duration: "3 hours",
+    groupSize: "2-50 people",
     rating: 4.7,
-    highlights: ["Scenic Trails", "Mountain Peaks", "Wildlife Spotting", "Photography"],
-    fullDescription: `Embark on an exhilarating mountain hiking expedition that takes you through some of the most spectacular landscapes in the region. This full-day adventure is designed for hiking enthusiasts who want to challenge themselves while enjoying breathtaking natural beauty.
+    highlights: ["Marina Views", "Buffet Dinner", "Live Entertainment", "City Skyline"],
+    fullDescription: `Experience the magic of Dubai Marina aboard a traditional wooden dhow while enjoying a delicious buffet dinner and stunning city views. This romantic cruise offers the perfect blend of traditional Arabian hospitality and modern luxury.
 
-    The expedition begins early morning with a drive to the mountain base, where you'll meet your experienced hiking guide and receive a safety briefing. The trail winds through diverse terrain, from rocky paths to lush valleys, offering constantly changing scenery.
+    Sail through the heart of Dubai Marina, one of the world's most impressive waterfront developments, surrounded by towering skyscrapers and luxury yachts. The traditional dhow has been beautifully restored with modern amenities while maintaining its authentic Arabian charm.
 
-    Along the way, you'll have opportunities to spot local wildlife and learn about the unique ecosystem of the mountain region. Your guide will share knowledge about local flora, fauna, and geological formations, making this both an adventure and educational experience.
+    Enjoy a sumptuous international buffet dinner featuring Arabic, Continental, and Asian cuisines, along with fresh salads, desserts, and beverages. The cruise includes live entertainment with traditional music and dance performances.
 
-    The highlight of the hike is reaching the summit, where you'll be rewarded with panoramic views that stretch for miles. This is the perfect spot for photography and a well-deserved rest while enjoying a packed lunch with a view.`,
+    The open-air upper deck provides perfect photo opportunities of the illuminated Dubai skyline, while the air-conditioned lower deck offers comfortable seating for dinner. This cruise is perfect for couples, families, and groups looking for a memorable evening experience.`,
     itinerary: [
-      "6:00 AM - Hotel pickup and drive to mountain base",
-      "7:30 AM - Safety briefing and equipment check",
-      "8:00 AM - Begin hiking expedition",
-      "10:00 AM - First rest stop and wildlife spotting",
-      "12:00 PM - Summit arrival and lunch break",
-      "1:00 PM - Photography session and exploration",
-      "2:00 PM - Begin descent",
-      "4:00 PM - Return to base and refreshments",
-      "5:30 PM - Return journey to hotel",
+      "7:00 PM - Arrival at Dubai Marina boarding point",
+      "7:30 PM - Welcome aboard and safety briefing",
+      "8:00 PM - Dhow cruise departure from marina",
+      "8:15 PM - Welcome drinks and appetizers served",
+      "8:30 PM - International buffet dinner service begins",
+      "9:00 PM - Live entertainment and traditional shows",
+      "9:30 PM - Open deck time for photography and views",
+      "10:00 PM - Return to marina and disembarkation",
     ],
     included: [
-      "Professional mountain guide",
-      "Transportation to and from mountain base",
-      "Hiking equipment (poles, safety gear)",
-      "Packed lunch and snacks",
-      "First aid kit and emergency equipment",
-      "Photography assistance",
-      "Refreshments at base camp",
-      "Certificate of completion",
+      "Traditional dhow cruise experience",
+      "International buffet dinner",
+      "Welcome drinks and refreshments",
+      "Live entertainment and cultural shows",
+      "Air-conditioned lower deck seating",
+      "Open upper deck for photography",
+      "Professional crew and service",
+      "Marina pickup point transfers available",
     ],
   },
   4: {
-    title: "Island Hopping Tour",
+    title: "Burj Khalifa At The Top",
     description:
-      "Explore pristine islands and crystal-clear waters in this tropical paradise adventure spanning two unforgettable days.",
-    image: "/placeholder.svg?height=500&width=800&text=Island+Hopping+Detail",
-    price: "From $399",
-    duration: "2 days",
-    groupSize: "6-16 people",
+      "Visit the world's tallest building and enjoy breathtaking views from the observation deck.",
+    image: "/placeholder.svg?height=500&width=800&text=Burj+Khalifa",
+    price: "From 179 AED",
+    duration: "2 hours",
+    groupSize: "1-20 people",
     rating: 4.9,
-    highlights: ["Multiple Islands", "Snorkeling", "Beach Time", "Local Cuisine"],
-    fullDescription: `Discover the beauty of pristine islands in this two-day island hopping adventure that combines relaxation with exploration. Visit multiple islands, each with its own unique character and natural beauty, from secluded beaches to vibrant coral reefs.
+    highlights: ["World's Tallest Building", "Observation Deck", "City Views", "Photo Opportunities"],
+    fullDescription: `Experience the pinnacle of human achievement at Burj Khalifa, the world's tallest building standing at 828 meters. This iconic skyscraper offers unparalleled views of Dubai from its observation decks on levels 124, 125, and 148.
 
-    Day one begins with a boat ride to the first island, where you'll enjoy snorkeling in crystal-clear waters teeming with colorful marine life. The afternoon is spent on a pristine beach with white sand and turquoise waters, perfect for swimming and sunbathing.
+    Your journey begins with a high-speed elevator ride that takes you to the observation deck in just 60 seconds. From this vantage point, you'll enjoy 360-degree panoramic views of Dubai's stunning skyline, coastline, and desert landscape.
 
-    Day two takes you to more remote islands where you can explore hidden coves, enjoy beach picnics, and experience the local island culture. Meet friendly locals, taste traditional island cuisine, and learn about the sustainable fishing practices that have been passed down through generations.
+    The experience includes access to outdoor terraces where you can feel the height and take incredible photos. Interactive displays and telescopes help you identify landmarks and learn about Dubai's remarkable transformation from a small fishing village to a global metropolis.
 
-    All meals are included, featuring fresh seafood and local specialties prepared by island chefs. Accommodation is provided in comfortable beachfront bungalows with stunning ocean views.`,
+    Visit during sunset for the most spectacular views as the city lights begin to twinkle below. The experience includes access to the Dubai Mall and Dubai Fountain area, making it perfect for a complete Dubai experience.`,
     itinerary: [
-      "Day 1: 8:00 AM - Departure by boat to first island",
-      "Day 1: 10:00 AM - Snorkeling session at coral reef",
-      "Day 1: 12:00 PM - Beach lunch and relaxation",
-      "Day 1: 3:00 PM - Island exploration and swimming",
-      "Day 1: 6:00 PM - Sunset dinner at beachfront restaurant",
-      "Day 1: 8:00 PM - Overnight at island accommodation",
-      "Day 2: 9:00 AM - Breakfast and boat to second island",
-      "Day 2: 11:00 AM - Cultural village visit",
-      "Day 2: 1:00 PM - Traditional lunch with locals",
-      "Day 2: 3:00 PM - Beach activities and free time",
-      "Day 2: 5:00 PM - Return journey",
+      "Flexible timing - Choose your preferred slot",
+      "Arrival at Burj Khalifa entrance in Dubai Mall",
+      "Security check and ticket validation",
+      "High-speed elevator ride to observation deck",
+      "Level 124 & 125 outdoor terrace experience",
+      "360-degree panoramic city views",
+      "Photo opportunities and interactive displays",
+      "Optional visit to Dubai Mall and Fountain",
     ],
     included: [
-      "Boat transportation between islands",
-      "Professional guide and boat crew",
-      "Snorkeling equipment and instruction",
-      "All meals (6 meals total)",
-      "One night accommodation in beachfront bungalow",
-      "Cultural village visit",
-      "Beach activities and equipment",
-      "Underwater photography service",
+      "Burj Khalifa At The Top tickets (Level 124 & 125)",
+      "High-speed elevator access",
+      "Outdoor terrace experience",
+      "Interactive displays and telescopes",
+      "Professional photography opportunities",
+      "Access to Dubai Mall",
+      "Complimentary WiFi",
+      "Souvenir photo options available",
     ],
   },
   5: {
-    title: "Cultural Heritage Walk",
+    title: "Dubai Aquarium & Underwater Zoo",
     description:
-      "Immerse yourself in local history and culture with guided walks through historic districts and traditional markets.",
-    image: "/placeholder.svg?height=500&width=800&text=Cultural+Heritage+Detail",
-    price: "From $89",
-    duration: "4 hours",
-    groupSize: "2-10 people",
+      "Walk through the underwater tunnel and discover marine life at Dubai Mall.",
+    image: "/placeholder.svg?height=500&width=800&text=Dubai+Aquarium",
+    price: "From 129 AED",
+    duration: "2 hours",
+    groupSize: "1-30 people",
     rating: 4.6,
-    highlights: ["Historic Sites", "Local Markets", "Traditional Crafts", "Cultural Stories"],
-    fullDescription: `Step back in time with this immersive cultural heritage walk that takes you through the historic heart of the city. This intimate tour is designed to provide deep insights into local traditions, architecture, and way of life.
+    highlights: ["Underwater Tunnel", "Marine Life", "Shark Encounters", "Interactive Exhibits"],
+    fullDescription: `Dive into an underwater world at Dubai Aquarium & Underwater Zoo, one of the largest suspended aquariums in the world. Home to over 140 species of marine life, including 400 sharks and rays, this attraction offers an immersive aquatic experience.
 
-    Your journey begins in the old quarter, where narrow alleyways and traditional buildings tell stories of centuries past. Visit historic mosques, traditional houses, and ancient fortifications while learning about the architectural styles and cultural significance of each site.
+    Walk through the spectacular 48-meter underwater tunnel surrounded by millions of liters of water and thousands of aquatic animals. Get up close with sand tiger sharks, giant groupers, and graceful stingrays as they glide overhead and around you.
 
-    Explore bustling local markets where artisans still practice traditional crafts passed down through generations. Watch skilled craftsmen at work, from metalworkers to textile weavers, and have the opportunity to purchase authentic handmade souvenirs.
+    The Underwater Zoo on Level 2 features three ecological zones: Rainforest, Rocky Shore, and Living Ocean. Discover fascinating creatures like crocodiles, otters, penguins, and piranhas in carefully recreated natural habitats.
 
-    The tour includes visits to local homes where you'll experience traditional hospitality and learn about daily life in the historic district. Enjoy traditional refreshments and engage with local families who are proud to share their heritage.`,
+    Interactive experiences include glass-bottom boat rides, shark diving for certified divers, and behind-the-scenes tours. Educational presentations and feeding shows provide insights into marine conservation and the fascinating world of aquatic life.`,
     itinerary: [
-      "2:00 PM - Meet at historic district entrance",
-      "2:15 PM - Walking tour of old quarter begins",
-      "2:45 PM - Visit to historic mosque and architecture tour",
-      "3:30 PM - Traditional crafts market exploration",
-      "4:15 PM - Local home visit and refreshments",
-      "5:00 PM - Artisan workshop demonstrations",
-      "5:30 PM - Traditional tea ceremony",
-      "6:00 PM - Tour conclusion at central square",
+      "Flexible timing - Open daily 10:00 AM to 12:00 AM",
+      "Entry through Dubai Mall, Ground Level",
+      "Main aquarium viewing from outside (free)",
+      "Tunnel experience with 270-degree views",
+      "Underwater Zoo exploration on Level 2",
+      "Interactive exhibits and touch tanks",
+      "Educational presentations and feeding shows",
+      "Optional glass-bottom boat ride",
     ],
     included: [
-      "Professional cultural guide",
-      "Historic sites entrance fees",
-      "Traditional refreshments and tea",
-      "Local home visit experience",
-      "Artisan workshop demonstrations",
-      "Small group personalized attention",
-      "Cultural information booklet",
-      "Traditional souvenir",
+      "Dubai Aquarium tunnel experience",
+      "Underwater Zoo access",
+      "Interactive exhibits and displays",
+      "Educational presentations",
+      "Touch tank experiences",
+      "Access to all three ecological zones",
+      "Professional staff guidance",
+      "Photography opportunities",
     ],
   },
   6: {
-    title: "Luxury Yacht Experience",
+    title: "IMG Worlds of Adventure",
     description:
-      "Sail in style aboard a luxury yacht with premium amenities and stunning coastal views in this exclusive half-day experience.",
-    image: "/placeholder.svg?height=500&width=800&text=Luxury+Yacht+Detail",
-    price: "From $599",
-    duration: "Half day",
-    groupSize: "2-12 people",
-    rating: 5.0,
-    highlights: ["Luxury Yacht", "Gourmet Dining", "Water Activities", "Sunset Views"],
-    fullDescription: `Indulge in the ultimate luxury experience aboard a premium yacht equipped with world-class amenities and professional crew. This exclusive half-day charter offers unparalleled comfort and service while exploring stunning coastal waters.
+      "World's largest indoor theme park with thrilling rides and attractions.",
+    image: "/placeholder.svg?height=500&width=800&text=IMG+Worlds",
+    price: "From 349 AED",
+    duration: "Full day",
+    groupSize: "1-50 people",
+    rating: 4.8,
+    highlights: ["Indoor Theme Park", "Thrilling Rides", "Marvel Zone", "Cartoon Network Zone"],
+    fullDescription: `Enter the world's largest indoor theme park spanning 1.5 million square feet of immersive entertainment. IMG Worlds of Adventure features four epic zones: Marvel, Cartoon Network, Lost Valley - Dinosaur Adventure, and IMG Boulevard.
 
-    The luxury yacht features spacious decks, comfortable seating areas, air-conditioned cabins, and state-of-the-art navigation systems. Enjoy panoramic views from multiple vantage points, including the sun deck and shaded lounge areas.
+    Experience heart-pounding rides and attractions featuring your favorite superheroes and cartoon characters. Meet Spider-Man, The Hulk, and other Marvel heroes, or join the Powerpuff Girls and Ben 10 in the Cartoon Network zone.
 
-    Your experience includes gourmet dining prepared by an onboard chef, featuring fresh seafood, premium ingredients, and international cuisine. The fully stocked bar offers premium beverages, champagne, and signature cocktails served by professional staff.
+    The Lost Valley takes you back to prehistoric times with life-like animatronic dinosaurs and thrilling rides. IMG Boulevard offers shopping, dining, and entertainment in a vibrant atmosphere inspired by classic Hollywood.
 
-    Take advantage of water activities including snorkeling, swimming, and fishing equipment. The yacht anchors at secluded bays where you can enjoy crystal-clear waters away from crowds. The experience concludes with a spectacular sunset viewing from the best vantage point on the water.`,
+    With over 20 rides and attractions, including roller coasters, 4D experiences, and interactive shows, there's something for every age and thrill level. The climate-controlled environment ensures year-round comfort regardless of Dubai's weather.`,
     itinerary: [
-      "2:00 PM - Welcome aboard and safety briefing",
-      "2:30 PM - Departure and coastal cruise begins",
-      "3:00 PM - First swimming and snorkeling stop",
-      "4:00 PM - Gourmet lunch service on deck",
-      "5:00 PM - Cruise to sunset viewing location",
-      "5:30 PM - Water activities and relaxation",
-      "6:30 PM - Sunset cocktails and appetizers",
-      "7:30 PM - Return to marina",
-      "8:00 PM - Disembarkation",
+      "Flexible timing - Park open 12:00 PM to 10:00 PM",
+      "Entry through main entrance and security check",
+      "Marvel Zone - Superhero rides and meet & greets",
+      "Cartoon Network Zone - Family-friendly attractions",
+      "Lost Valley - Dinosaur adventures and rides",
+      "IMG Boulevard - Shopping and dining",
+      "4D cinema experiences and interactive shows",
+      "Full day of unlimited rides and attractions",
     ],
     included: [
-      "Luxury yacht charter with professional crew",
-      "Gourmet lunch prepared by onboard chef",
-      "Premium beverages and cocktails",
-      "Snorkeling and swimming equipment",
-      "Fishing equipment and instruction",
-      "Towels and sun protection amenities",
-      "Professional photography service",
-      "Sunset champagne toast",
+      "Full day admission to IMG Worlds",
+      "Access to all four themed zones",
+      "Unlimited rides and attractions",
+      "4D cinema experiences",
+      "Character meet and greet opportunities",
+      "Interactive shows and entertainment",
+      "Climate-controlled indoor environment",
+      "Free WiFi throughout the park",
+    ],
+  },
+  7: {
+    title: "Dubai Frame",
+    description:
+      "Iconic golden frame offering panoramic views of old and new Dubai.",
+    image: "/placeholder.svg?height=500&width=800&text=Dubai+Frame",
+    price: "From 89 AED",
+    duration: "1.5 hours",
+    groupSize: "1-25 people",
+    rating: 4.5,
+    highlights: ["Panoramic Views", "Old vs New Dubai", "Sky Bridge", "Museum"],
+    fullDescription: `Experience Dubai's past, present, and future at the iconic Dubai Frame, a magnificent 150-meter high architectural landmark that perfectly frames the city's contrasting landscapes. This golden rectangular structure offers unique perspectives of both historic and modern Dubai.
+
+    Begin your journey at the ground floor museum, which showcases Dubai's transformation from a small fishing village to a global metropolis through interactive exhibits, virtual reality experiences, and historical artifacts.
+
+    Take the high-speed elevator to the Sky Bridge on the 48th floor, featuring a thrilling glass floor walkway that offers breathtaking 360-degree views. On one side, see Old Dubai with its traditional souks and heritage sites, while the other side reveals the futuristic skyline of New Dubai.
+
+    The experience concludes with a visit to the Future Dubai gallery, where you can explore the city's ambitious plans and upcoming projects through immersive displays and interactive presentations.`,
+    itinerary: [
+      "Flexible timing - Open 9:00 AM to 9:00 PM",
+      "Entry and security check at ground level",
+      "Ground floor museum and historical exhibits",
+      "Virtual reality experience of old Dubai",
+      "High-speed elevator to Sky Bridge",
+      "Glass floor walkway and panoramic views",
+      "Photography session with city views",
+      "Future Dubai gallery exploration",
+    ],
+    included: [
+      "Dubai Frame admission ticket",
+      "Ground floor museum access",
+      "Sky Bridge experience with glass floor",
+      "Virtual reality historical journey",
+      "Future Dubai gallery visit",
+      "Professional photography opportunities",
+      "Interactive exhibits and displays",
+      "Multilingual audio guide available",
+    ],
+  },
+  8: {
+    title: "Global Village",
+    description:
+      "Cultural and entertainment destination featuring pavilions from around the world.",
+    image: "/images/tourgv.webp",
+    price: "From 25 AED",
+    duration: "4 hours",
+    groupSize: "1-100 people",
+    rating: 4.4,
+    highlights: ["Cultural Pavilions", "International Cuisine", "Shopping", "Entertainment Shows"],
+    fullDescription: `Embark on a journey around the world in one evening at Global Village, Dubai's premier cultural and entertainment destination. This seasonal attraction features pavilions representing over 75 countries, offering authentic cultural experiences, shopping, and dining.
+
+    Explore pavilions showcasing traditional architecture, handicrafts, and cultural artifacts from Asia, Africa, Europe, and the Americas. Each pavilion offers unique shopping opportunities with authentic products, textiles, jewelry, and souvenirs directly from their respective countries.
+
+    Enjoy international cuisine from food stalls and restaurants representing different cultures. From Indian street food to Turkish delights, Mexican tacos to Italian gelato, Global Village offers a culinary journey around the world.
+
+    The entertainment program includes cultural shows, live performances, and spectacular fireworks displays. Enjoy traditional dances, music performances, and acrobatic shows from different countries throughout the evening.`,
+    itinerary: [
+      "Seasonal operation: November to April",
+      "Entry gates open at 4:00 PM",
+      "Cultural pavilions exploration",
+      "International shopping experience",
+      "Traditional food tasting tour",
+      "Cultural shows and performances",
+      "Fireworks display (weekends)",
+      "Park closes at 12:00 AM (weekdays) / 1:00 AM (weekends)",
+    ],
+    included: [
+      "Global Village entry ticket",
+      "Access to all cultural pavilions",
+      "Cultural shows and entertainment",
+      "Shopping opportunities",
+      "Food court access",
+      "Fireworks display (weekends)",
+      "Free parking",
+      "Family-friendly environment",
+    ],
+  },
+  9: {
+    title: "Dubai Miracle Garden",
+    description:
+      "World's largest natural flower garden with over 50 million flowers.",
+    image: "/placeholder.svg?height=500&width=800&text=Miracle+Garden",
+    price: "From 75 AED",
+    duration: "2 hours",
+    groupSize: "1-50 people",
+    rating: 4.6,
+    highlights: ["50 Million Flowers", "Floral Displays", "Butterfly Garden", "Photo Opportunities"],
+    fullDescription: `Step into a floral wonderland at Dubai Miracle Garden, the world's largest natural flower garden featuring over 50 million flowers and 250 million plants. This seasonal attraction transforms the desert landscape into a colorful paradise of artistic floral displays.
+
+    Marvel at incredible flower sculptures and installations, including life-size houses, cars, and even an Emirates A380 aircraft made entirely of fresh flowers. The garden features over 120 different flower varieties arranged in stunning patterns and designs.
+
+    Explore themed areas including the Butterfly Garden, where you can walk among thousands of colorful butterflies in a climate-controlled dome. The Aromatic Garden offers a sensory experience with fragrant herbs and flowers.
+
+    The garden's innovative irrigation system uses treated wastewater, making it an environmentally sustainable attraction. Visit during the cooler months (November to May) when the flowers are in full bloom and the weather is perfect for outdoor exploration.`,
+    itinerary: [
+      "Seasonal operation: November to May",
+      "Garden opens at 9:00 AM",
+      "Main entrance and floral displays",
+      "Emirates A380 flower installation",
+      "Butterfly Garden experience",
+      "Aromatic Garden exploration",
+      "Photography session throughout garden",
+      "Garden closes at 9:00 PM (weekdays) / 11:00 PM (weekends)",
+    ],
+    included: [
+      "Dubai Miracle Garden entry ticket",
+      "Access to all floral displays",
+      "Butterfly Garden experience",
+      "Aromatic Garden visit",
+      "Photography opportunities",
+      "Garden map and information",
+      "Rest areas and facilities",
+      "Free parking",
+    ],
+  },
+  10: {
+    title: "Atlantis Aquaventure",
+    description:
+      "Thrilling water park with slides, marine encounters, and beach access.",
+    image: "/images/touratlantis.jpg",
+    price: "From 299 AED",
+    duration: "Full day",
+    groupSize: "1-40 people",
+    rating: 4.7,
+    highlights: ["Water Slides", "Marine Encounters", "Private Beach", "Aquarium Access"],
+    fullDescription: `Experience the ultimate aquatic adventure at Atlantis Aquaventure Waterpark, one of the most exciting water parks in the world. Located at the iconic Atlantis The Palm resort, this waterpark offers thrilling slides, marine encounters, and pristine beach access.
+
+    Challenge yourself on record-breaking water slides including the Leap of Faith, a near-vertical drop through a shark-filled lagoon, and the Poseidon's Revenge, featuring a trap door that drops you into a high-speed water slide.
+
+    Enjoy the private beach with crystal-clear waters and stunning views of Dubai's skyline. Relax on comfortable loungers or participate in various beach activities and water sports.
+
+    The experience includes access to The Lost Chambers Aquarium, where you can explore underwater ruins and encounter over 65,000 marine animals including sharks, rays, and colorful tropical fish.`,
+    itinerary: [
+      "Open daily 10:00 AM to sunset",
+      "Entry through Atlantis The Palm resort",
+      "Aquaventure Waterpark access",
+      "Thrilling water slides and attractions",
+      "Private beach and water sports",
+      "Lost Chambers Aquarium visit",
+      "Marine animal encounters",
+      "Beach relaxation and dining options",
+    ],
+    included: [
+      "Full day Aquaventure Waterpark access",
+      "All water slides and attractions",
+      "Private beach access",
+      "Lost Chambers Aquarium entry",
+      "Marine animal encounters",
+      "Beach loungers and facilities",
+      "Shower and changing facilities",
+      "Life jackets and safety equipment",
+    ],
+  },
+  11: {
+    title: "Dubai Parks and Resorts",
+    description:
+      "Multiple theme parks including Motiongate, Bollywood Parks, and Legoland.",
+    image: "/placeholder.svg?height=500&width=800&text=Dubai+Parks",
+    price: "From 279 AED",
+    duration: "Full day",
+    groupSize: "1-50 people",
+    rating: 4.5,
+    highlights: ["Multiple Theme Parks", "Motiongate", "Bollywood Parks", "Legoland"],
+    fullDescription: `Discover the magic of Dubai Parks and Resorts, the largest integrated theme park destination in the Middle East. This entertainment complex features three world-class theme parks: Motiongate Dubai, Bollywood Parks Dubai, and Legoland Dubai.
+
+    Motiongate Dubai brings Hollywood to life with attractions based on popular movies like Shrek, Madagascar, and The Hunger Games. Experience thrilling rides, live shows, and meet your favorite movie characters.
+
+    Bollywood Parks Dubai celebrates the vibrant world of Indian cinema with colorful attractions, live performances, and authentic Indian cuisine. Enjoy Bollywood-themed rides and spectacular dance shows.
+
+    Legoland Dubai is perfect for families with children aged 2-12, featuring over 40 rides, shows, and attractions. Build and play with millions of LEGO bricks in this interactive theme park.`,
+    itinerary: [
+      "Open daily 10:00 AM to 8:00 PM (varies by season)",
+      "Entry through main gate and park selection",
+      "Motiongate Dubai - Hollywood movie attractions",
+      "Bollywood Parks Dubai - Indian cinema experience",
+      "Legoland Dubai - Family-friendly LEGO fun",
+      "Riverland Dubai - Dining and entertainment",
+      "Live shows and character meet & greets",
+      "Shopping and dining throughout the parks",
+    ],
+    included: [
+      "Access to selected theme park(s)",
+      "All rides and attractions",
+      "Live shows and entertainment",
+      "Character meet and greet opportunities",
+      "Riverland Dubai access",
+      "Free parking",
+      "Family-friendly facilities",
+      "Safety equipment for all rides",
+    ],
+  },
+  12: {
+    title: "Ski Dubai",
+    description:
+      "Indoor ski resort with real snow, skiing, snowboarding, and penguin encounters.",
+    image: "/placeholder.svg?height=500&width=800&text=Ski+Dubai",
+    price: "From 199 AED",
+    duration: "3 hours",
+    groupSize: "1-30 people",
+    rating: 4.6,
+    highlights: ["Real Snow", "Skiing & Snowboarding", "Penguin Encounters", "Snow Park"],
+    fullDescription: `Experience winter wonderland in the heart of the desert at Ski Dubai, the first indoor ski resort in the Middle East. This 22,500 square meter snow park maintains a temperature of -1°C to -2°C year-round, featuring real snow and alpine atmosphere.
+
+    Enjoy skiing and snowboarding on five slopes of varying difficulty levels, from beginner-friendly areas to challenging black runs. Professional instructors are available for lessons, and all equipment is provided including skis, boots, and winter clothing.
+
+    Meet the adorable King and Gentoo penguins during the daily Penguin Encounter sessions. Watch these amazing creatures play in their sub-zero habitat and learn about their behavior from expert handlers.
+
+    The Snow Park area offers fun activities for non-skiers including tobogganing, snowball fights, and building snowmen. The chairlift provides scenic views of the entire snow park and Dubai skyline.`,
+    itinerary: [
+      "Open daily 10:00 AM to 11:00 PM",
+      "Entry and equipment fitting",
+      "Ski/snowboard lessons (if required)",
+      "Slope time and winter activities",
+      "Penguin Encounter session",
+      "Snow Park activities",
+      "Chairlift ride and views",
+      "Warm-up at Alpine Café",
+    ],
+    included: [
+      "Ski Dubai entry ticket",
+      "Winter clothing (jacket, pants, gloves, hat)",
+      "Ski or snowboard equipment",
+      "Boots and safety equipment",
+      "Penguin Encounter experience",
+      "Snow Park access",
+      "Chairlift rides",
+      "Professional instruction available",
+    ],
+  },
+  13: {
+    title: "Dubai Fountain Show",
+    description:
+      "World's largest choreographed fountain system with music and lights.",
+    image: "/placeholder.svg?height=500&width=800&text=Dubai+Fountain",
+    price: "Free",
+    duration: "30 minutes",
+    groupSize: "Unlimited",
+    rating: 4.8,
+    highlights: ["Choreographed Fountains", "Music & Lights", "Burj Khalifa Views", "Free Experience"],
+    fullDescription: `Witness the spectacular Dubai Fountain show, the world's largest choreographed fountain system located at the base of Burj Khalifa. This mesmerizing water, music, and light show takes place on the 30-acre Burj Khalifa Lake.
+
+    The fountain shoots water up to 500 feet in the air, equivalent to a 50-story building, synchronized to a range of classical, contemporary, and world music. The show features over 6,600 lights and 25 colored projectors.
+
+    Shows run every 20 minutes in the evening and every 30 minutes during the day, with each performance lasting approximately 5 minutes. The best viewing spots are from the Dubai Mall waterfront promenade, Souk Al Bahar, or the Burj Khalifa observation deck.
+
+    This free attraction draws millions of visitors annually and offers perfect photo opportunities with the illuminated Burj Khalifa as a backdrop. The fountain system uses recycled water and is environmentally sustainable.`,
+    itinerary: [
+      "Daily shows from 1:00 PM to 1:30 PM",
+      "Evening shows every 20 minutes from 6:00 PM to 11:00 PM",
+      "Best viewing from Dubai Mall waterfront",
+      "Alternative viewing from Souk Al Bahar",
+      "Photography opportunities throughout",
+      "Combine with Dubai Mall shopping",
+      "Dining options with fountain views",
+      "Free experience for all ages",
+    ],
+    included: [
+      "Free admission to fountain shows",
+      "Multiple daily performances",
+      "Best viewing locations access",
+      "Photography opportunities",
+      "Family-friendly experience",
+      "Accessible viewing areas",
+      "Nearby dining and shopping",
+      "Public facilities and amenities",
+    ],
+  },
+  14: {
+    title: "La Mer Beach",
+    description:
+      "Trendy beachfront destination with dining, shopping, and water sports.",
+    image: "/placeholder.svg?height=500&width=800&text=La+Mer",
+    price: "From 50 AED",
+    duration: "Half day",
+    groupSize: "1-20 people",
+    rating: 4.4,
+    highlights: ["Beach Activities", "Water Sports", "Dining Options", "Shopping"],
+    fullDescription: `Experience the vibrant atmosphere of La Mer, Dubai's trendy beachfront destination that combines pristine beaches with contemporary dining, shopping, and entertainment. This Instagram-worthy location offers a perfect blend of relaxation and activity.
+
+    Enjoy the beautiful sandy beach with crystal-clear waters, perfect for swimming, sunbathing, and beach games. The beach features comfortable loungers, umbrellas, and professional lifeguard services for a safe and relaxing experience.
+
+    Try exciting water sports including kayaking, paddleboarding, and jet skiing. The calm waters make it perfect for beginners, while equipment rental and instruction are readily available.
+
+    Explore the colorful street art, boutique shops, and diverse dining options ranging from casual beachside cafes to upscale restaurants. The area features unique architecture and Instagram-worthy murals perfect for social media photos.`,
+    itinerary: [
+      "Open daily 24/7 (shops and restaurants vary)",
+      "Beach access and setup",
+      "Swimming and sunbathing",
+      "Water sports activities",
+      "Street art and photography tour",
+      "Shopping at boutique stores",
+      "Dining at beachfront restaurants",
+      "Sunset viewing and relaxation",
+    ],
+    included: [
+      "Beach access",
+      "Basic beach facilities",
+      "Water sports equipment rental",
+      "Shopping area access",
+      "Dining options",
+      "Street art viewing",
+      "Photography opportunities",
+      "Public facilities and parking",
+    ],
+  },
+  15: {
+    title: "Dubai Marina Walk",
+    description:
+      "Waterfront promenade with dining, shopping, and stunning marina views.",
+    image: "/placeholder.svg?height=500&width=800&text=Marina+Walk",
+    price: "Free",
+    duration: "2 hours",
+    groupSize: "Unlimited",
+    rating: 4.3,
+    highlights: ["Marina Views", "Waterfront Dining", "Shopping", "Yacht Watching"],
+    fullDescription: `Stroll along Dubai Marina Walk, a beautiful waterfront promenade that offers stunning views of luxury yachts, impressive skyscrapers, and the sparkling marina waters. This 7-kilometer walkway is perfect for leisurely walks, dining, and people-watching.
+
+    Admire the impressive architecture of the Marina district, featuring some of the world's tallest residential buildings. The area showcases modern urban planning with its mix of residential towers, hotels, and commercial spaces.
+
+    Enjoy diverse dining options from casual cafes to fine dining restaurants, many with outdoor terraces offering marina views. The area comes alive in the evening with vibrant nightlife and entertainment options.
+
+    Watch luxury yachts and boats in the marina while enjoying the cool breeze from the water. The walk connects to JBR Beach and offers easy access to shopping malls, making it a perfect starting point for exploring the area.`,
+    itinerary: [
+      "Open 24/7 - Best visited in evening",
+      "Start at Marina Mall or JBR",
+      "Waterfront promenade walk",
+      "Marina and yacht viewing",
+      "Photography opportunities",
+      "Dining at waterfront restaurants",
+      "Shopping at Marina Walk shops",
+      "Evening entertainment and nightlife",
+    ],
+    included: [
+      "Free access to Marina Walk",
+      "Waterfront promenade",
+      "Marina and yacht views",
+      "Dining options",
+      "Shopping opportunities",
+      "Photography spots",
+      "Public facilities",
+      "Connection to JBR Beach",
+    ],
+  },
+  16: {
+    title: "Jumeirah Beach",
+    description:
+      "Beautiful white sand beach with clear waters and Burj Al Arab views.",
+    image: "/placeholder.svg?height=500&width=800&text=Jumeirah+Beach",
+    price: "Free",
+    duration: "Half day",
+    groupSize: "Unlimited",
+    rating: 4.5,
+    highlights: ["White Sand Beach", "Burj Al Arab Views", "Swimming", "Beach Activities"],
+    fullDescription: `Relax at Jumeirah Beach, one of Dubai's most beautiful and popular public beaches offering pristine white sand, crystal-clear waters, and iconic views of the Burj Al Arab hotel. This free public beach provides a perfect escape from the city's hustle and bustle.
+
+    The beach stretches for several kilometers along Dubai's coastline, providing ample space for sunbathing, beach games, and water activities. The gentle waves make it perfect for swimming and suitable for families with children.
+
+    Enjoy unobstructed views of the iconic Burj Al Arab, Dubai's sail-shaped luxury hotel, which provides a stunning backdrop for photos. The beach is particularly beautiful during sunset when the sky creates a magical atmosphere.
+
+    The area features excellent facilities including showers, changing rooms, and nearby cafes and restaurants. Beach volleyball courts and jogging tracks are available for more active visitors.`,
+    itinerary: [
+      "Open 24/7 - Best visited morning or evening",
+      "Beach access and setup",
+      "Swimming in clear waters",
+      "Sunbathing on white sand",
+      "Burj Al Arab photography",
+      "Beach volleyball or activities",
+      "Sunset viewing",
+      "Nearby dining options",
+    ],
+    included: [
+      "Free beach access",
+      "White sand beach",
+      "Swimming facilities",
+      "Burj Al Arab views",
+      "Beach volleyball courts",
+      "Jogging tracks",
+      "Public facilities (showers, changing rooms)",
+      "Nearby dining and shopping",
     ],
   },
 }
 
+// Function to convert tour title to URL slug (same as in tours page)
+function titleToSlug(title: string): string {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '') // Remove special characters except spaces and hyphens
+    .replace(/\s+/g, '-') // Replace spaces with hyphens
+    .replace(/-+/g, '-') // Replace multiple hyphens with single hyphen
+    .trim()
+    .replace(/^-+|-+$/g, '') // Remove leading/trailing hyphens
+}
+
 export default function TourDetailPage({ params }: { params: { id: string } }) {
-  const tourId = Number.parseInt(params.id)
-  const tour = tours[tourId as keyof typeof tours]
+  const slug = params.id
+
+  // Find tour by matching slug from new data structure
+  let tour = tours.find(t => titleToSlug(t.title) === slug)
+
+  // Fallback to legacy data if not found in new structure
+  if (!tour) {
+    tour = Object.values(toursData).find(t => titleToSlug(t.title) === slug)
+  }
 
   if (!tour) {
     return (
@@ -302,34 +700,47 @@ export default function TourDetailPage({ params }: { params: { id: string } }) {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
               <div className="prose prose-lg max-w-none mb-8">
-                <div className="whitespace-pre-line text-gray-600 text-lg leading-relaxed">{tour.fullDescription}</div>
-              </div>
-
-              <div className="mb-8">
-                <h3 className="text-2xl font-bold text-[#002D62] mb-6">Tour Itinerary</h3>
-                <div className="space-y-3">
-                  {tour.itinerary.map((item, index) => (
-                    <div key={index} className="flex items-start">
-                      <span className="w-6 h-6 bg-[#D7AF6A] text-[#002D62] rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-1 flex-shrink-0">
-                        {index + 1}
-                      </span>
-                      <span className="text-gray-600">{item}</span>
-                    </div>
-                  ))}
+                <div className="whitespace-pre-line text-gray-600 text-lg leading-relaxed">
+                  {(tour as any).fullDescription || (tour as any).longDescription || tour.description}
                 </div>
               </div>
 
-              <div>
-                <h3 className="text-2xl font-bold text-[#002D62] mb-6">What's Included</h3>
-                <ul className="space-y-3">
-                  {tour.included.map((item, index) => (
-                    <li key={index} className="flex items-start">
-                      <span className="w-2 h-2 bg-[#D7AF6A] rounded-full mr-3 mt-2 flex-shrink-0"></span>
-                      <span className="text-gray-600">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              {tour.itinerary && tour.itinerary.length > 0 && (
+                <div className="mb-8">
+                  <h3 className="text-2xl font-bold text-[#002D62] mb-6">Tour Itinerary</h3>
+                  <div className="space-y-3">
+                    {tour.itinerary.map((item: any, index: number) => (
+                      <div key={index} className="flex items-start">
+                        <span className="w-6 h-6 bg-[#D7AF6A] text-[#002D62] rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-1 flex-shrink-0">
+                          {index + 1}
+                        </span>
+                        <div className="text-gray-600">
+                          {typeof item === 'string' ? item : (
+                            <div>
+                              <div className="font-semibold">{item.title}</div>
+                              <div>{item.description}</div>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {tour.included && tour.included.length > 0 && (
+                <div>
+                  <h3 className="text-2xl font-bold text-[#002D62] mb-6">What's Included</h3>
+                  <ul className="space-y-3">
+                    {tour.included.map((item: string, index: number) => (
+                      <li key={index} className="flex items-start">
+                        <span className="w-2 h-2 bg-[#D7AF6A] rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                        <span className="text-gray-600">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
 
             <div className="lg:col-span-1">
@@ -384,14 +795,47 @@ export default function TourDetailPage({ params }: { params: { id: string } }) {
                   </div>
                 </div>
 
-                <div className="mt-6 pt-6 border-t border-gray-200">
-                  <h4 className="font-semibold text-[#002D62] mb-3">Tour Highlights</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {tour.highlights.map((highlight, index) => (
-                      <span key={index} className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">
-                        {highlight}
-                      </span>
-                    ))}
+                {tour.highlights && tour.highlights.length > 0 && (
+                  <div className="mt-6 pt-6 border-t border-gray-200">
+                    <h4 className="font-semibold text-[#002D62] mb-3">Tour Highlights</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {tour.highlights.map((highlight: any, index: number) => (
+                        <span key={index} className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">
+                          {typeof highlight === 'string' ? highlight : highlight.title}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Social Media */}
+                <div className="mt-6 pt-6 border-t border-gray-200 text-center">
+                  <h4 className="text-xl font-semibold text-[#002D62] mb-4">Follow Us</h4>
+                  <div className="flex justify-center space-x-4">
+                    <a
+                      href="https://www.tiktok.com/@adamadventuretours"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-12 h-12 bg-black rounded-lg flex items-center justify-center text-white hover:bg-gray-800 transition-colors"
+                    >
+                      <FaTiktok size={20} />
+                    </a>
+                    <a
+                      href="https://www.instagram.com/adamadventuretours"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center text-white hover:from-purple-600 hover:to-pink-600 transition-colors"
+                    >
+                      <FaInstagram size={20} />
+                    </a>
+                    <a
+                      href="https://www.facebook.com/share/1AanxYhXJY/?mibextid=wwXIfr"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center text-white hover:bg-blue-700 transition-colors"
+                    >
+                      <FaFacebookF size={20} />
+                    </a>
                   </div>
                 </div>
               </div>
