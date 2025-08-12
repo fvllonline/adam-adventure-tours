@@ -56,10 +56,10 @@ export const tours: Tour[] = [
     ]
   },
   {
-    id: "dubai-desert-safari-quad-bike-camel-ride-al-khayma-camp",
-    title: "Dubai Desert Safari, Quad Bike, Camel Ride & Al Khayma Camp",
-    description: "Ultimate desert adventure with dune bashing, quad biking, camel rides, and traditional Bedouin camp experience",
-    longDescription: "Experience the magic of the Arabian desert with this comprehensive safari package. Enjoy thrilling dune bashing, exciting quad bike rides, traditional camel experiences, and an authentic Bedouin camp with BBQ dinner and entertainment.",
+    id: "dubai-desert-safari-camel-ride-al-khayma-camp",
+    title: "Dubai Desert Safari, Camel Ride & Al Khayma Camp",
+    description: "Ultimate desert adventure with dune bashing, camel rides, and traditional Bedouin camp experience",
+    longDescription: "Experience the magic of the Arabian desert with this comprehensive safari package. Enjoy thrilling dune bashing, traditional camel experiences, and an authentic Bedouin camp with BBQ dinner and entertainment.",
     image: "/images/tourdesert.webp",
     duration: "6 hours",
     groupSize: "2-30 people",
@@ -69,7 +69,6 @@ export const tours: Tour[] = [
     included: [
       "Hotel pickup and drop-off",
       "Dune bashing in 4x4 vehicle",
-      "Quad bike riding (30 minutes)",
       "Camel riding experience",
       "Sandboarding",
       "Henna painting",
@@ -85,10 +84,6 @@ export const tours: Tour[] = [
       {
         title: "4:00 PM - Dune Bashing",
         description: "Thrilling ride over the golden sand dunes"
-      },
-      {
-        title: "5:00 PM - Quad Biking",
-        description: "30-minute quad bike adventure in the desert"
       },
       {
         title: "6:00 PM - Camel Riding",

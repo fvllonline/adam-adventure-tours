@@ -49,8 +49,8 @@ const tours = [
   },
   {
     id: 2,
-    title: "Dubai Desert Safari, Quad Bike, Camel Ride & Al Khayma Camp",
-    description: "Desert thrills with dunes, quads, camels & camp.",
+    title: "Dubai Desert Safari, Camel Ride & Al Khayma Camp",
+    description: "Desert thrills with dunes, camels & camp.",
     image: "/images/tourdesert.webp",
   },
   {
@@ -133,54 +133,7 @@ const tours = [
         </div>
       </section>
 
-      {/* About Us Preview */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold text-[#002D62] mb-6">Adam Adventure Tours & Tourism</h2>
-              <p className="text-gray-600 text-lg mb-6">
-                Your gateway to unforgettable experiences in Dubai and the United Arab Emirates. With our deep
-                understanding of the tourism industry and our passion for creating extraordinary journeys, we are
-                your trusted partner for exceptional vacations.
-              </p>
-              <p className="text-gray-600 text-lg mb-6">
-                From visa processing to deep desert adventures, we offer a comprehensive range of services tailored
-                to the diverse needs of our clients. Our experienced professionals are committed to providing
-                personalized attention and superior quality services that exceed your expectations.
-              </p>
-              <div className="grid grid-cols-2 gap-6 mb-8">
-                <div className="text-center">
-                  <Users className="text-[#D7AF6A] mx-auto mb-2" size={40} />
-                  <div className="text-2xl font-bold text-[#002D62]">1000+</div>
-                  <div className="text-gray-600">Happy Clients</div>
-                </div>
-                <div className="text-center">
-                  <Globe className="text-[#D7AF6A] mx-auto mb-2" size={40} />
-                  <div className="text-2xl font-bold text-[#002D62]">UAE</div>
-                  <div className="text-gray-600">Dubai Specialist</div>
-                </div>
-              </div>
-              <Link
-                href="/about"
-                className="border-2 border-[#D7AF6A] text-[#D7AF6A] px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-[#D7AF6A] hover:text-[#002D62]"
-              >
-                Learn More
-              </Link>
-            </div>
-            <div className="relative">
-              {/* Replace with actual about image */}
-              <Image
-                src="/images/favicon_aatt.png"
-                alt="About Us"
-                width={500}
-                height={500}
-                className=""
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Services Preview */}
       <section className="py-20">
