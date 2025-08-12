@@ -6,51 +6,51 @@ export default function ServicesPage() {
   const services = [
     {
       id: 1,
-      title: "Custom Tours & Activities",
+      title: "Flight Booking",
       description:
-        "Discover the best of Dubai with carefully crafted tours: iconic landmarks, luxury experiences, desert adventures and local culture immersion.",
-      image: "/placeholder.svg?height=300&width=400&text=Custom+Tours",
-      features: ["Iconic Landmarks", "Luxury Experiences", "Desert Adventures", "Local Culture"],
+        "Book your flights with ease through our comprehensive flight booking service. We offer competitive rates and flexible options for domestic and international travel.",
+      image: "/images/serviceflight.jpg",
+      features: ["Domestic Flights", "International Flights", "Competitive Rates", "Flexible Options"],
     },
     {
       id: 2,
-      title: "Adventure Experiences",
+      title: "Hotel Booking",
       description:
-        "Dune bashing, desert safaris, water sports, skydiving, hot air balloon rides... a wide choice for thrill-seekers and adventure enthusiasts.",
-      image: "/placeholder.svg?height=300&width=400&text=Desert+Adventures",
-      features: ["Dune Bashing", "Water Sports", "Skydiving", "Hot Air Balloon"],
+        "Find and book the perfect accommodation for your stay. From luxury resorts to budget-friendly hotels, we have options for every traveler and budget.",
+      image: "/images/servicehotel.jpg",
+      features: ["Luxury Resorts", "Budget Hotels", "City Center Locations", "Beach Resorts"],
     },
     {
       id: 3,
-      title: "Cultural Immersion",
+      title: "Umrah",
       description:
-        "Explore traditional souks, historical sites, local traditions and authentic cuisine for a true immersion in Emirati culture.",
-      image: "/placeholder.svg?height=300&width=400&text=Local+Culture",
-      features: ["Traditional Souks", "Historical Sites", "Local Traditions", "Authentic Cuisine"],
+        "Complete Umrah packages with guided spiritual journeys. We provide comprehensive services including accommodation, transportation, and religious guidance.",
+      image: "/images/serviceumrah.jpg",
+      features: ["Complete Packages", "Religious Guidance", "Sacred Transportation", "Spiritual Support"],
     },
     {
       id: 4,
-      title: "Theme Park Excursions",
+      title: "Visa Issuance",
       description:
-        "Dubai Parks and Resorts, Underwater Aquarium and Zoo, and much more for all ages. Perfect for families and groups.",
-      image: "/placeholder.svg?height=300&width=400&text=Theme+Parks",
-      features: ["Dubai Parks", "Underwater Aquarium", "Family Activities", "All Ages"],
+        "Professional visa processing services for all destinations. We handle all documentation and ensure smooth visa approval for your travel needs.",
+      image: "/images/servicevisa.jpg",
+      features: ["Tourist Visas", "Business Visas", "Document Processing", "Fast Track Service"],
     },
     {
       id: 5,
-      title: "Luxury & VIP Experiences",
+      title: "Travel Packages",
       description:
-        "Private yachts, helicopter flights, bespoke dining and personalized shopping for an exclusive and unforgettable experience.",
-      image: "/placeholder.svg?height=300&width=400&text=Luxury+VIP",
-      features: ["Private Yachts", "Helicopter Flights", "Bespoke Dining", "VIP Shopping"],
+        "Customized travel packages tailored to your preferences. Complete vacation solutions including flights, hotels, tours, and activities all in one package.",
+      image: "/images/servicetravel.png",
+      features: ["Custom Packages", "All-Inclusive Options", "Group Discounts", "Flexible Itineraries"],
     },
     {
       id: 6,
-      title: "Visa Services & Assistance",
+      title: "Tours & Activities",
       description:
-        "From visa processing to comprehensive assistance services, we facilitate all administrative aspects of your journey.",
-      image: "/placeholder.svg?height=300&width=400&text=Visa+Services",
-      features: ["Visa Processing", "24/7 Assistance", "Administrative Services", "Multilingual Support"],
+        "Discover amazing destinations with our curated tours and activities. From cultural experiences to adventure tours, we offer unforgettable experiences.",
+      image: "/images/servicetours.jpg",
+      features: ["Cultural Tours", "Adventure Activities", "City Sightseeing", "Desert Safaris"],
     },
   ]
 

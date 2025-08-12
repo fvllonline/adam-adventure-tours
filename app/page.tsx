@@ -16,36 +16,48 @@ export default function HomePage() {
   const services = [
     {
       id: 1,
-      title: "Custom Tours & Activities",
-      description: "Discover the best of Dubai with carefully crafted tours: iconic landmarks, luxury experiences, and local culture immersion.",
-      image: "/placeholder.svg?height=300&width=400&text=Custom+Tours",
+      title: "Flight Booking",
+      description: "Book your flights with ease through our comprehensive flight booking service with competitive rates and flexible options.",
+      image: "/images/serviceflight.jpg",
     },
     {
       id: 2,
-      title: "Adventure Experiences",
-      description: "Dune bashing, desert safaris, water sports, skydiving, hot air balloon rides... for thrill-seekers and adventure lovers.",
-      image: "/placeholder.svg?height=300&width=400&text=Desert+Adventures",
+      title: "Hotel Booking",
+      description: "Find and book the perfect accommodation for your stay, from luxury resorts to budget-friendly hotels.",
+      image: "/images/servicehotel.jpg",
     },
     {
       id: 3,
-      title: "Cultural Immersion",
-      description: "Explore traditional souks, historical sites, local traditions, and authentic Emirati cuisine for a true cultural experience.",
-      image: "/placeholder.svg?height=300&width=400&text=Local+Culture",
+      title: "Umrah",
+      description: "Complete Umrah packages with guided spiritual journeys, accommodation, transportation, and religious guidance.",
+      image: "/images/serviceumrah.jpg",
     },
     {
       id: 4,
-      title: "Luxury & VIP Experiences",
-      description: "Private yachts, helicopter flights, bespoke dining, and personalized shopping for an exclusive and unforgettable experience.",
-      image: "/placeholder.svg?height=300&width=400&text=Luxury+VIP",
+      title: "Visa Issuance",
+      description: "Professional visa processing services for all destinations with fast track options and document assistance.",
+      image: "/images/servicevisa.jpg",
+    },
+    {
+      id: 5,
+      title: "Travel Packages",
+      description: "Customized travel packages tailored to your preferences with all-inclusive options and flexible itineraries.",
+      image: "/images/servicetravel.png",
+    },
+    {
+      id: 6,
+      title: "Tours & Activities",
+      description: "Discover amazing destinations with our curated tours and activities, from cultural experiences to adventure tours.",
+      image: "/images/servicetours.jpg",
     },
   ]
 
 const tours = [
   {
     id: 1,
-    title: "Museum of the Future",
-    description: "Discover futuristic innovations in Dubai's most iconic building.",
-    image: "/images/tourmuseum.jpg",
+    title: "Dubai Luxury Yacht Tour",
+    description: "Sail in luxury.",
+    image: "/images/touryachtlux.jpg",
   },
   {
     id: 2,
@@ -55,9 +67,9 @@ const tours = [
   },
   {
     id: 3,
-    title: "Dubai Luxury Yacht Tour",
-    description: "Sail in luxury.",
-    image: "/images/touryachtlux.jpg",
+    title: "Museum of the Future",
+    description: "Discover futuristic innovations in Dubai's most iconic building.",
+    image: "/images/tourmuseum.jpg",
   },
   {
     id: 4,
@@ -145,7 +157,7 @@ const tours = [
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
               <div key={service.id} className="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
                 <Image

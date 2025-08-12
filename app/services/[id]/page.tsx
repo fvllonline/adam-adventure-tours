@@ -4,123 +4,123 @@ import { ArrowLeft, Phone, Mail, MessageCircle, MapPin } from "lucide-react"
 
 const services = {
   1: {
-    title: "Adventure Tours",
+    title: "Flight Booking",
     description:
-      "Embark on thrilling adventures and outdoor experiences designed for the brave at heart. Our adventure tours combine excitement with safety, offering you the chance to push your limits while exploring some of the world's most spectacular destinations.",
-    image: "/placeholder.svg?height=500&width=800&text=Adventure+Tours+Detail",
-    features: ["Mountain Climbing", "Desert Expeditions", "Water Sports", "Wildlife Safaris"],
-    fullDescription: `Our adventure tours are carefully crafted to provide you with unforgettable experiences while ensuring your safety at all times. Whether you're scaling mountain peaks, exploring vast deserts, or diving into crystal-clear waters, our expert guides will be with you every step of the way.
+      "Book your flights with ease through our comprehensive flight booking service. We offer competitive rates and flexible options for domestic and international travel with 24/7 support.",
+    image: "/images/serviceflight.jpg",
+    features: ["Domestic Flights", "International Flights", "Competitive Rates", "Flexible Options"],
+    fullDescription: `Our flight booking service provides you with access to the best flight deals and options worldwide. We work with major airlines and travel partners to ensure you get competitive rates and flexible booking options that suit your travel needs.
 
-    We offer a wide range of adventure activities suitable for different skill levels, from beginner-friendly excursions to challenging expeditions for experienced adventurers. All our tours include professional equipment, safety briefings, and comprehensive insurance coverage.
+    Whether you're planning a business trip, family vacation, or solo adventure, our experienced travel consultants will help you find the perfect flights. We handle everything from simple one-way tickets to complex multi-city itineraries with multiple stops.
 
-    Our adventure packages can be customized to match your preferences and fitness level. We work with certified local guides who have extensive knowledge of the terrain and can provide insights into the local culture and environment.`,
+    Our advanced booking system allows us to compare prices across multiple airlines and find the best deals available. We also provide flexible booking options, including refundable tickets, seat upgrades, and special meal requests to make your journey as comfortable as possible.`,
     included: [
-      "Professional guide and safety equipment",
-      "All necessary permits and entrance fees",
-      "Transportation to and from adventure sites",
-      "Emergency medical support",
-      "Comprehensive insurance coverage",
-      "Photography service for memorable moments",
+      "Access to competitive flight rates worldwide",
+      "Flexible booking and cancellation policies",
+      "24/7 customer support and assistance",
+      "Seat selection and upgrade options",
+      "Special meal and accessibility requests",
+      "Travel insurance options",
     ],
   },
   2: {
-    title: "Cultural Experiences",
+    title: "Hotel Booking",
     description:
-      "Immerse yourself in authentic local cultures and traditions around the world. Our cultural experiences go beyond typical tourist attractions to provide genuine connections with local communities and their way of life.",
-    image: "/placeholder.svg?height=500&width=800&text=Cultural+Experiences+Detail",
-    features: ["Local Festivals", "Traditional Crafts", "Culinary Tours", "Historical Sites"],
-    fullDescription: `Our cultural experience programs are designed to provide authentic interactions with local communities, allowing you to gain deep insights into different ways of life, traditions, and customs.
+      "Find and book the perfect accommodation for your stay. From luxury resorts to budget-friendly hotels, we have options for every traveler and budget with guaranteed best rates.",
+    image: "/images/servicehotel.jpg",
+    features: ["Luxury Resorts", "Budget Hotels", "City Center Locations", "Beach Resorts"],
+    fullDescription: `Our hotel booking service provides access to thousands of accommodations worldwide, from luxury 5-star resorts to comfortable budget hotels. We work directly with hotel partners to secure the best rates and exclusive deals for our clients.
 
-    We partner with local communities to ensure that our cultural tours are respectful, sustainable, and beneficial to the local population. You'll have opportunities to participate in traditional ceremonies, learn local crafts, taste authentic cuisine, and visit historical sites with knowledgeable local guides.
+    Whether you're looking for a beachfront resort, a city center business hotel, or a cozy boutique property, our travel specialists will help you find the perfect accommodation that matches your preferences and budget. We consider factors like location, amenities, guest reviews, and special requirements.
 
-    Each cultural experience is carefully curated to provide educational value while being enjoyable and memorable. We believe that travel should be transformative, and our cultural programs are designed to broaden your perspective and create lasting connections.`,
+    Our extensive network of hotel partners allows us to offer competitive rates and exclusive perks such as room upgrades, late checkout, complimentary breakfast, and spa credits. We also provide detailed information about each property to help you make informed decisions.`,
     included: [
-      "Local community guide and cultural interpreter",
-      "Participation in traditional activities and ceremonies",
-      "Authentic local meals and cooking demonstrations",
-      "Visits to historical and cultural sites",
-      "Traditional craft workshops",
-      "Cultural performance shows",
+      "Access to thousands of hotels worldwide",
+      "Guaranteed best rate matching",
+      "Room upgrades and special perks when available",
+      "Flexible booking and cancellation policies",
+      "24/7 reservation support",
+      "Detailed property information and reviews",
     ],
   },
   3: {
-    title: "Luxury Travel",
+    title: "Umrah",
     description:
-      "Experience the pinnacle of luxury travel with our premium services. From world-class accommodations to exclusive access to the finest destinations, we ensure every detail of your journey exceeds expectations.",
-    image: "/placeholder.svg?height=500&width=800&text=Luxury+Travel+Detail",
-    features: ["5-Star Hotels", "Private Jets", "Exclusive Access", "Personal Concierge"],
-    fullDescription: `Our luxury travel services are designed for discerning travelers who appreciate the finest things in life. We provide access to exclusive destinations, premium accommodations, and personalized services that create truly extraordinary experiences.
+      "Complete Umrah packages with guided spiritual journeys. We provide comprehensive services including accommodation, transportation, and religious guidance for a meaningful pilgrimage experience.",
+    image: "/images/serviceumrah.jpg",
+    features: ["Complete Packages", "Religious Guidance", "Sacred Transportation", "Spiritual Support"],
+    fullDescription: `Our Umrah packages are designed to provide a spiritually enriching and hassle-free pilgrimage experience. We understand the sacred nature of this journey and ensure every aspect is handled with the utmost care and respect.
 
-    Every aspect of your luxury journey is meticulously planned and executed by our team of luxury travel specialists. From private jet transfers to exclusive dining experiences, from personal shopping assistants to private museum tours, we ensure that every moment of your trip is exceptional.
+    Our comprehensive packages include flights, accommodation near the Holy Mosques, ground transportation, and experienced religious guides who will assist you throughout your spiritual journey. We offer various package options to suit different budgets and preferences.
 
-    We work with the world's finest hotels, resorts, and service providers to offer you unparalleled comfort and exclusivity. Our luxury packages can be completely customized to your preferences and desires.`,
+    We work with trusted partners in Saudi Arabia to ensure high-quality services and accommodations. Our team includes experienced Umrah guides who provide religious guidance, help with rituals, and ensure you have a meaningful and comfortable pilgrimage experience.`,
     included: [
-      "Luxury accommodation in 5-star properties",
-      "Private transportation and transfers",
-      "Personal concierge service 24/7",
-      "Exclusive access to private events and venues",
-      "Fine dining reservations at top restaurants",
-      "VIP treatment at all destinations",
+      "Round-trip flights to Saudi Arabia",
+      "Accommodation near Masjid al-Haram and Masjid an-Nabawi",
+      "Ground transportation between holy sites",
+      "Experienced religious guide and support",
+      "Visa processing assistance",
+      "24/7 support during your pilgrimage",
     ],
   },
   4: {
-    title: "Group Tours",
+    title: "Visa Issuance",
     description:
-      "Join our expertly organized group tours with professional guides and carefully planned itineraries. Perfect for families, friends, or corporate groups looking for hassle-free travel experiences.",
-    image: "/placeholder.svg?height=500&width=800&text=Group+Tours+Detail",
-    features: ["Expert Guides", "Planned Itineraries", "Group Discounts", "Transportation"],
-    fullDescription: `Our group tours offer the perfect balance of structured itineraries and flexibility, allowing you to explore destinations with like-minded travelers while enjoying the expertise of professional guides.
+      "Professional visa processing services for all destinations. We handle all documentation and ensure smooth visa approval for your travel needs with expert guidance and fast processing.",
+    image: "/images/servicevisa.jpg",
+    features: ["Tourist Visas", "Business Visas", "Document Processing", "Fast Track Service"],
+    fullDescription: `Our visa processing service takes the complexity out of visa applications. We have extensive experience with visa requirements for destinations worldwide and provide expert guidance throughout the entire process.
 
-    We organize groups of various sizes, from intimate small groups to larger parties, ensuring that each tour maintains a personal touch while benefiting from group dynamics and cost savings. Our experienced tour leaders handle all logistics, allowing you to focus on enjoying your journey.
+    Our team of visa specialists stays updated with the latest visa regulations and requirements for different countries. We handle all types of visas including tourist, business, transit, and family visit visas, ensuring your application is complete and accurate.
 
-    All our group tours include comprehensive itineraries that cover must-see attractions, cultural experiences, and hidden gems that only locals know about. We also build in free time for personal exploration and relaxation.`,
+    We offer fast-track processing for urgent travel needs and provide regular updates on your application status. Our high success rate and efficient processing times make us the preferred choice for visa services.`,
     included: [
-      "Professional tour guide throughout the journey",
-      "All transportation and transfers",
-      "Accommodation in quality hotels",
-      "Daily breakfast and selected meals",
-      "Entrance fees to attractions and sites",
-      "Group activities and entertainment",
+      "Complete visa application assistance",
+      "Document review and verification",
+      "Fast-track processing options",
+      "Regular application status updates",
+      "Expert guidance on visa requirements",
+      "Support for visa interviews when required",
     ],
   },
   5: {
-    title: "Business Travel",
+    title: "Travel Packages",
     description:
-      "Professional travel services tailored for corporate clients with a focus on efficiency, comfort, and cost-effectiveness. We understand the unique needs of business travelers.",
-    image: "/placeholder.svg?height=500&width=800&text=Business+Travel+Detail",
-    features: ["Corporate Rates", "24/7 Support", "Expense Management", "Travel Policy"],
-    fullDescription: `Our business travel services are designed to meet the specific needs of corporate travelers and companies. We provide efficient, reliable, and cost-effective travel solutions that allow business professionals to focus on their work while we handle all travel arrangements.
+      "Customized travel packages tailored to your preferences. Complete vacation solutions including flights, hotels, tours, and activities all in one comprehensive package.",
+    image: "/images/servicetravel.png",
+    features: ["Custom Packages", "All-Inclusive Options", "Group Discounts", "Flexible Itineraries"],
+    fullDescription: `Our travel packages offer complete vacation solutions that combine flights, accommodation, tours, and activities into one convenient and cost-effective package. We create customized itineraries based on your interests, budget, and travel preferences.
 
-    We offer comprehensive travel management services including booking, expense tracking, policy compliance, and 24/7 support. Our corporate rates and partnerships with airlines and hotels ensure that you get the best value for your travel budget.
+    Whether you're planning a romantic getaway, family vacation, adventure trip, or cultural exploration, our travel specialists will design the perfect package for you. We handle all the details so you can focus on enjoying your journey.
 
-    Our dedicated business travel consultants understand the urgency and precision required for corporate travel and are available around the clock to assist with any changes or emergencies.`,
+    Our packages include carefully selected accommodations, transportation, guided tours, and activities that showcase the best of each destination. We also offer flexible options that allow you to customize your itinerary and add or remove components as needed.`,
     included: [
-      "Dedicated corporate travel consultant",
-      "24/7 emergency support and assistance",
-      "Flexible booking and change policies",
-      "Comprehensive expense reporting",
-      "Corporate rates and negotiated discounts",
-      "Travel policy compliance monitoring",
+      "Customized itinerary planning",
+      "Flight and accommodation bookings",
+      "Guided tours and activities",
+      "Ground transportation arrangements",
+      "24/7 travel support during your trip",
+      "Flexible package modifications",
     ],
   },
   6: {
-    title: "Honeymoon Packages",
+    title: "Tours & Activities",
     description:
-      "Romantic getaways designed for couples celebrating their special moments. Our honeymoon packages feature intimate settings, couple activities, and luxurious amenities.",
-    image: "/placeholder.svg?height=500&width=800&text=Honeymoon+Packages+Detail",
-    features: ["Romantic Settings", "Couple Activities", "Special Amenities", "Privacy"],
-    fullDescription: `Our honeymoon packages are specially crafted to celebrate love and create unforgettable memories for newlyweds. We understand that your honeymoon is a once-in-a-lifetime experience, and we ensure every detail is perfect.
+      "Discover amazing destinations with our curated tours and activities. From cultural experiences to adventure tours, we offer unforgettable experiences for every type of traveler.",
+    image: "/images/servicetours.jpg",
+    features: ["Cultural Tours", "Adventure Activities", "City Sightseeing", "Desert Safaris"],
+    fullDescription: `Our tours and activities showcase the best of each destination through carefully curated experiences. We offer a wide range of options from cultural immersion tours to thrilling adventure activities, ensuring there's something for every traveler.
 
-    From romantic beachfront resorts to cozy mountain retreats, we offer a variety of destinations and accommodations that provide the perfect setting for romance. Our packages include special amenities like couples' spa treatments, private dinners, and romantic excursions.
+    Our experienced local guides provide insider knowledge and authentic experiences that you won't find in guidebooks. Whether you're interested in historical sites, natural wonders, local cuisine, or adrenaline-pumping adventures, we have the perfect tour for you.
 
-    We work closely with couples to understand their preferences and create personalized itineraries that reflect their unique love story. Every honeymoon package includes special touches that make the experience truly magical.`,
+    All our tours are designed with safety, comfort, and enjoyment in mind. We use quality transportation, provide professional guides, and include all necessary equipment and entrance fees. Our small group sizes ensure personalized attention and flexibility.`,
     included: [
-      "Romantic accommodation with special amenities",
-      "Couples' spa treatments and wellness activities",
-      "Private romantic dinners and experiences",
-      "Champagne and special welcome gifts",
-      "Photography sessions to capture memories",
-      "Flexible itinerary with privacy options",
+      "Professional local guides",
+      "Quality transportation and transfers",
+      "All entrance fees and permits",
+      "Safety equipment when required",
+      "Small group sizes for personalized experience",
+      "Flexible itineraries and customization options",
     ],
   },
 }
